@@ -46,7 +46,7 @@ const Login = () => {
                 alt="logo"
                 className="logo"
               />
-              <h4 className="title">We are The NED Team</h4>
+              <h4 className="title">We The NED Team</h4>
             </div>
             <p className="subtitle">Please login to your account</p>
 
