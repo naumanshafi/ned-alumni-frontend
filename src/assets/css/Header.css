@@ -1,54 +1,86 @@
-/* General Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+  .btn.btn-primary {
+    color: #FFFFFF;
+    background-color:#06BBCC;
+    border-color:#06BBCC;
+    border-radius: unset;
+  }
 
-/* Header Styles */
-.header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  .btn.btn-primary:hover {
+    background-color: #06BBCC;
+    color: #FFFFFF;
+    border-color:#06BBCC;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin-left: 1.5rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #00bcd4;
-}
+  
+  .navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    font-family: "Heebo",sans-serif;
+    margin-right: 30px;
+    padding: 25px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link {
+      margin-right: 0;
+      padding: 10px 0;
+    }
+  
+    .navbar-light .navbar-nav {
+      border-top: 1px solid #EEEEEE;
+    }
+  }
+  
+  .navbar-light .navbar-brand,
+  .navbar-light a.btn {
+    height: 75px;
+  }
+  
+  .navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+  }
+  
+  @media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+    }
+  
+    .navbar .dropdown-menu.fade-down {
+      top: 100%;
+      transform: rotateX(-75deg);
+      transform-origin: 0% 0%;
+    }
+  
+    .navbar .nav-item:hover .dropdown-menu {
+      top: 100%;
+      transform: rotateX(0deg);
+      visibility: visible;
+      transition: .5s;
+      opacity: 1;
+    }
+  }
+  
+  .text{
+    color:#06BBCC;
+  }
