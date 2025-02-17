@@ -1,0 +1,141 @@
+/* Footer Container */
+.footer-container {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #181818;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px 80px;
+    box-sizing: border-box
+  }
+  /* About Section */
+  .footer-about {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-title {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Sansation;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+    color: #acacac;
+    line-height: 26px;
+  }
+  
+  /* Contact Section */
+  .footer-contact,
+  .footer-address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .footer-email,
+  .footer-address-text {
+    font-size: 16px;
+    color: #acacac;
+  }
+  
+  /* Quick Links */
+  .footer-links {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    font-family: Sansation;
+  }
+  
+  .footer-link-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .footer-link {
+    font-size: 16px;
+    color: #acacac;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #fff;
+  }
+  
+  /* Social Media Section */
+  .footer-social {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    transform: rotate(90deg);
+  }
+  
+  .social-icon-twitter {
+    transform: rotate(0deg);
+  }
+  .social-icon:hover {
+    opacity: 0.7;
+  }
+  
+  /* Bottom Footer */
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  
+  .footer-copyright {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .footer-legal {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-legal-link {
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .footer-legal-link:hover {
+    color: #fff;
+  }

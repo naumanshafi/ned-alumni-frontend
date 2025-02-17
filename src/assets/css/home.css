@@ -1,0 +1,918 @@
+.home-container {
+    gap: 8px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 200px
+  }
+  
+  .home-content {
+    gap: 20px;
+    width: 750px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  
+  .home-heading {
+    width: 750px;
+    height: 29.75px;
+    display: flex;
+    position: relative;
+    align-self: stretch;
+    align-items: flex-start;
+  }
+  
+  .icon-small {
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 30px;
+    position: absolute;
+  }
+  
+  .text-primary {
+    left: 47px;
+    color: rgba(137, 12, 37, 1);
+    width: 333px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 29.76px;
+    text-decoration: none;
+  }
+  
+  .text-heading {
+    color: rgba(38, 38, 38, 1);
+    width: 645px;
+    height: auto;
+    font-size: 64px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+  
+  .home-details {
+    gap: 20px;
+    width: 481px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  
+  .text-secondary {
+    color: rgba(115, 116, 119, 1);
+    height: auto;
+    font-size: 18px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration: none;
+  }
+  
+  .action-buttons {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-primary {
+    gap: 2px;
+    display: flex;
+    padding: 7px 16px;
+    align-items: flex-end;
+    border-radius: 8px;
+    background-color: rgba(150, 1, 1, 1);
+  }
+  
+  .text-button {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration: none;
+  }
+  
+  .link-container {
+    gap: 2px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .link-text {
+    color: rgba(183, 26, 52, 1);
+    height: auto;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration: underline;
+  }
+  
+  .navbar-toggler {
+    background-color: #000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .social-gallary-container{
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-links-container {
+    gap: 20px;
+    display: flex;
+    padding: 0 0 32px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-link {
+    width: 32px;
+    height: 19.69px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .image-gallery-container {
+    margin-left: 30px;
+    width: 1206px;
+    display: flex;
+    flex-shrink: 0;
+  }
+  
+  .gallery-main-image {
+    width: auto;
+    height: 400px;
+    align-self: stretch;
+    border-radius: 19px;
+  } 
+  
+  
+  
+  /* Fundraising & Events Section */
+  .fundraising-events-container {
+    gap: 150px;
+    margin-left: 200px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-color: rgba(246, 246, 246, 0.33);
+  }
+  
+  /* Fundraising Section */
+  .fundraising-section {
+    gap: 40px;
+    width: 545px;
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  
+  .fundraising-content {
+    gap: 24px;
+    width: 798px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  
+  .fundraising-title {
+    color: rgba(38, 38, 38, 1);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Sansation;
+  }
+  
+  .fundraising-description {
+    color: rgba(115, 116, 119, 1);
+    font-size: 18px;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  
+  /* Fundraising Image */
+  .fundraising-image {
+    width: 545px;
+    height: 504px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    border: 8px solid rgba(12, 12, 12, 0.06);
+    border-radius: 15px;
+  }
+  
+  .fundraising-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .events-section {
+    margin-right: 100px;
+    gap: 32px;
+    width: 671px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .events-title {
+    color: rgba(38, 38, 38, 1);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Sansation;
+  }
+  
+  /* Event Card */
+  .event-card {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .event-details {
+    gap: 28px;
+    display: flex;
+    padding: 32px 24px;
+    align-items: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 11px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .event-name {
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Sansation;
+  }
+  
+  .event-description {
+    color: rgba(115, 116, 119, 1);
+    font-size: 18px;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  
+  /* Event Location & Date */
+  .event-location-date {
+    gap: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .event-location {
+    color: rgba(115, 116, 119, 1);
+    font-size: 16px;
+    text-align: left;
+    font-family: Sansation;
+    font-weight: 400;
+  }
+  
+  .event-date {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .event-calendar-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .event-date-text {
+    color: rgba(137, 12, 37, 1);
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+  }
+  
+  /* View More Button */
+  .event-view-more {
+    gap: 2px;
+    display: flex;
+    padding: 7px 16px;
+    align-items: flex-end;
+    border: 1px solid rgba(137, 12, 37, 1);
+    border-radius: 8px;
+  }
+  
+  .view-more-text {
+    color: rgba(137, 12, 37, 1);
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  
+  /* Navigation Arrows */
+  .event-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .event-arrow-up,
+  .event-arrow-down {
+    width: 57px;
+    height: 57px;
+    cursor: pointer;
+  }
+  
+  .event-arrow-up:hover,
+  .event-arrow-down:hover {
+    opacity: 0.7;
+  }
+  
+  
+  
+  
+  
+  
+  /* Centennial Section */
+  .centennial-section {
+    position: relative;
+    left: 100px;
+    display: flex;
+    align-items: flex-start;
+    gap: 55px;
+  }
+  
+  
+  /* Centennial Info */
+  .centennial-info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 602.5px;
+  }
+  
+  /* Centennial Header */
+  .centennial-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .centennial-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .centennial-title {
+    font-size: 20px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(183, 26, 52, 1);
+    line-height: 28px;
+  }
+  
+  /* Centennial Subtitle */
+  .centennial-subtitle {
+    font-size: 40px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(38, 38, 38, 1);
+    line-height: 46px;
+  }
+  
+  .centennial-normal-text {
+    color: rgba(38, 38, 38, 1);
+  }
+  
+  .centennial-highlight-text {
+    color: rgba(137, 12, 37, 1);
+    font-weight: 700;
+  }
+  
+  /* Centennial Description */
+  .centennial-description {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    color: rgba(115, 116, 119, 1);
+    line-height: 28px;
+  }
+  
+  /* Centennial Programs */
+  .centennial-programs {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Program Column */
+  .program-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 296.25px;
+  }
+  
+  /* Program Card */
+  .program-card {
+    position: relative;
+    width: 296.25px;
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    /* overflow: hidden; */
+  }
+  
+  .program-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .program-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 21px;
+    font-family: Inter;
+    font-weight: 400;
+    color: white;
+  }
+  
+  /* Learn More Section */
+  .centennial-learn-more {
+    position: relative;
+    top: 387px;
+    right: 1098px;
+  }
+  
+  .centennial-campus-image {
+    width: 136px;
+    height: 199px;
+  }
+  
+  .learn-more-button {
+    position: relative;
+    width: 190px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(137, 12, 37, 1);
+    cursor: pointer;
+    transform: rotate(-50deg);
+    left: 66px;
+    bottom: 30px;
+  }
+  
+  .learn-more-text {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .learn-more-icon {
+    width: 14px;
+    height: 16px;
+    margin-left: 10px;
+    transform: rotate(85deg);
+  }
+  
+  /* Scholarship Section */
+  .scholarship-section
+  {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    background-color: rgba(137, 12, 37, 1);
+    gap: 55px;
+    box-sizing: border-box
+  }
+  
+  /* Scholarship Banner */
+  .scholarship-banner {
+    width: 595px;
+    height: auto;
+    border-radius: 18px;
+  }
+  
+  /* Scholarship Content */
+  .scholarship-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 629px;
+  }
+  
+  /* Scholarship Header */
+  .scholarship-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Scholarship Title */
+  .scholarship-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .scholarship-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .scholarship-heading {
+    font-size: 20px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: white;
+  }
+  
+  /* Main Title */
+  .scholarship-main-title {
+    font-size: 40px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: white;
+    line-height: 46px;
+  }
+  
+  /* Scholarship Description */
+  .scholarship-description {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    color: rgba(228, 228, 228, 1);
+    line-height: 28px;
+  }
+  
+  /* Scholarship Buttons */
+  .scholarship-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  /* Learn More Button */
+  .scholarship-learn-more-button {
+    display: flex;
+    padding: 7px 16px;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .learn-more-button .button-text {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(137, 12, 37, 1);
+    line-height: 26px;
+  }
+  
+  /* Watch Video Button */
+  .watch-video-button {
+    display: flex;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .watch-video-button .button-text {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: white;
+    line-height: 26px;
+  }
+  
+  /* Hover Effects */
+  .learn-more-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .watch-video-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  
+  /* Join NED Alumni Section */
+  .join-ned-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+  }
+  
+  
+  .ned-header-description{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 400px;
+  }
+  /* Header */
+  .join-ned-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .join-ned-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .join-ned-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .join-ned-heading {
+    font-size: 20px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(183, 26, 52, 1);
+  }
+  
+  .join-ned-main-title {
+    font-size: 40px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(38, 38, 38, 1);
+    line-height: 46px;
+  }
+  
+  .highlight-text {
+    color: rgba(38, 38, 38, 1);
+    font-weight: 700;
+  }
+  
+  /* Description */
+  .join-ned-description {
+    width: 500px;
+    text-align: left;
+  }
+  
+  .join-ned-text {
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    color: rgba(115, 116, 119, 1);
+    line-height: 28px;
+  }
+  
+  /* Benefits Section */
+  .join-ned-benefits {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Benefit Card */
+  .benefit-card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    border: 1px solid rgba(208, 213, 221, 1);
+    border-radius: 16px;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  /* Benefit Image */
+  .benefit-image {
+    width: 360px;
+    height: 332px;
+    position: relative;
+    border-radius: 18px;
+    /* overflow: hidden; */
+  }
+  
+  .image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Benefit Titles */
+  .benefit-title {
+    font-size: 22px;
+    font-family: Sansation;
+    font-weight: 700;
+    color: rgba(38, 38, 38, 1);
+  }
+  
+  .benefit-description {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(115, 116, 119, 1);
+    line-height: 20px;
+  }
+  
+  /* Event Button */
+  .event-button {
+    display: flex;
+    padding: 7px 16px;
+    border-radius: 8px;
+    background-color: rgba(150, 1, 1, 1);
+    cursor: pointer;
+  }
+  
+  .event-button .event-text {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;
+  }
+  
+  /* Hover Effects */
+  .event-button:hover {
+    background-color: rgba(150, 1, 1, 0.8);
+  }
+  
+  
+  
+  
+  /* Alumni Convention Section */
+  .alumni-convention {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-left: 250px;
+  }
+  
+  /* Alumni Convention Content */
+  .alumni-convention-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 50%;
+  }
+  
+  /* Alumni Convention Header */
+  .alumni-convention-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .alumni-convention-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .alumni-convention-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .alumni-convention-heading {
+    font-size: 20px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(183, 26, 52, 1);
+  }
+  
+  /* Main Title */
+  .alumni-convention-main-title {
+    font-size: 40px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    line-height: 46px;
+  }
+  
+  .highlight-text {
+    color: rgba(137, 12, 37, 1);
+    font-weight: 700;
+  }
+  
+  /* Alumni Convention Description */
+  .alumni-convention-description {
+    font-size: 18px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(137, 137, 137, 1);
+    line-height: 28px;
+  }
+  
+  /* Buttons */
+  .alumni-convention-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  /* Learn More Button */
+  .learn-more-button-1 {
+    display: flex;
+    padding: 7px 16px;
+    border-radius: 6px;
+    background-color: rgba(137, 12, 37, 1);
+    cursor: pointer;
+  }
+  
+  .learn-more-button-1 .button-text {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: white;
+    line-height: 26px;
+  }
+  
+  /* Watch Video Button */
+  .watch-video-button {
+    display: flex;
+    padding: 7px 16px;
+    border: 1px solid rgba(137, 12, 37, 1);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .watch-video-button .button-text {
+    font-size: 16px;
+    font-family: Sansation;
+    font-weight: 400;
+    color: rgba(137, 12, 37, 1);
+    line-height: 26px;
+  }
+  
+  /* Hover Effects */
+  .learn-more-button:hover {
+    background-color: rgba(137, 12, 37, 0.9);
+  }
+  
+  .watch-video-button:hover {
+    background-color: rgba(137, 12, 37, 0.1);
+  }
+  
+  /* Alumni Convention Image */
+  .alumni-convention-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .alumni-convention-img {
+    width: 100%;
+    max-width: 491px;
+    height: auto;
+    border-radius: 18px;
+  }

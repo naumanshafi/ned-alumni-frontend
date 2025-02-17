@@ -2,19 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Header from './components/common/Header';
+import Navbar from './components/common/navbar';
+import Footer from './components/common/footer';
+import Home from './components/common/home';
+import './App.css';
 
 const App = () => {
     return (
-        <Router>
-            <Header />
-            <div className="container">
-                <Routes>
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/login" element={<Login />} />
-                </Routes>
-            </div>
-        </Router>
+        <div className="main">
+            <Navbar />
+            <Home/>
+            <Footer />
+        </div>
     );
 };
 
