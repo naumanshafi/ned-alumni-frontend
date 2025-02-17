@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="navbar-bottom">
         {/* Logo */}
         <div className="logo">
-          <img src="/images/ned_logo.svg" alt="NEDAC Logo" />
+          <img src="/images/ned_logo.png" alt="NEDAC Logo" />
         </div>
 
         {/* Navigation Menu */}
