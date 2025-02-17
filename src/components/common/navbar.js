@@ -14,12 +14,9 @@ const Navbar = () => {
         {/* Navigation Menu */}
         <div className="navbar-menu">
           <span className="menu-item">Home</span>
-          <span className="menu-item">About</span>
-          <span className="menu-item">Board & Committees</span>
-          <span className="menu-item">Giving</span>
-          <span className="menu-item">Member</span>
+          <span className="menu-item">About Us</span>
+          <span className="menu-item">Programs/Events</span>
           <span className="menu-item">Resources</span>
-          <span className="menu-item">Events</span>
           <span className="menu-item">Media</span>
           <span className="menu-item">Contact</span>
         </div>
