@@ -12,7 +12,7 @@ const Home = () => {
                 alt="Small Icon"
                 class="icon-small"
               />
-              <span class="text-primary">NED ALUMNI AMERICA</span>
+              <span class="text-primary">NEDATS - NED Alumni Association of Tri-State</span>
             </div>
             <span class="text-heading">
               Explore Boundless Opportunities at NED
