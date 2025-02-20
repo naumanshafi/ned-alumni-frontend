@@ -8,7 +8,7 @@ const Header = () => {
             {/* Logo / Brand */}
             <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
                 <h2 className="m-0 text">
-                    <i className="fa fa-book me-3"></i>eLEARNING
+                    <i className="fa fa-book me-3"></i>NEDATS
                 </h2>
             </Link>
 

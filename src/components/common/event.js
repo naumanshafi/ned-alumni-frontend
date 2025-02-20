@@ -18,11 +18,12 @@ const Event = () => {
     };
 
     const isFirstEvent = currentEventIndex === 0;
-    const isLastEvent = currentEventIndex === eventData.events.length - 1;
+    const isLastE = currentEventIndex === eventData.events.length - 1;
+    const isLastEvent = currentEventIndex === 0; 
 
     return (
         <div className="content-events-container">
-            <div className="content-section">
+{/*             <div className="content-section">
                 <div className="content-wrapper">
                     <span className="content-title">{eventData.featuredContent.title}</span>
                     <span className="content-description">
@@ -34,7 +35,7 @@ const Event = () => {
                          alt="Featured Content" />
                 </div>
             </div>
-    
+ */}    
             <div className="events-section">
                 <span className="events-title">Upcoming Events :</span>
                 <div className="event-card">
@@ -64,11 +65,11 @@ const Event = () => {
                     </div>
                 </div>
                 <div className="event-navigation">
-                    <img src="/images/arrow-left.svg" 
+                    <img src="/images/left-arrow.svg" 
                          alt="Previous Event" 
                          className={`event-arrow-left ${isFirstEvent ? 'inactive' : 'active'}`}
                          onClick={handlePrevEvent} />
-                    <img src="/images/arrow-right.svg" 
+                    <img src="/images/right-arrow.svg" 
                          alt="Next Event" 
                          className={`event-arrow-right ${isLastEvent ? 'inactive' : 'active'}`}
                          onClick={handleNextEvent} />

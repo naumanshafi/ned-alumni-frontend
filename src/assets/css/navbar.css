@@ -59,6 +59,7 @@
   gap: 12px;
   white-space: nowrap;
   height: 40px;
+  justify-content: center;
 }
 
 .auth-button {
@@ -73,12 +74,14 @@
   background-color: #960101;
   color: #fff;
   border: none;
+  flex: 1 0 50%;
 }
 
 .auth-button.sign-up {
   border: 1px solid #890c25;
   color: #890c25;
   background-color: transparent;
+  flex: 1 0 50%;
 }
 
   .navbar-menu {

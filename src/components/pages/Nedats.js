@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../assets/css/pages/about.css';
+import '../../assets/css/pages/nedats.css';
 
-const About = () => {
+const Nedats = () => {
   const values = [
     {
       icon: "/images/icons/innovation.svg",
@@ -121,4 +121,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default Nedats; 

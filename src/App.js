@@ -5,10 +5,10 @@ import Login from './components/auth/Login';
 import Navbar from './components/common/navbar';
 import Footer from './components/common/footer';
 import Home from './components/pages/home';
-import About from './components/pages/About';
-import BoardCommittees from './components/pages/BoardCommittees';
+import Nedats from './components/pages/Nedats';
+import Events from './components/pages/Events';
 import Member from './components/pages/Member';
-import Programs from './components/pages/Programs';
+import Programs from './components/pages/Events';
 import Media from './components/pages/Media';
 
 import './App.css';
@@ -20,8 +20,8 @@ const App = () => {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/board-committees" element={<BoardCommittees />} />
+                    <Route path="/nedats" element={<Nedats />} />
+                    <Route path="/Events" element={<Events />} />
                     <Route path="/member" element={<Member />} />
                     <Route path="/programs" element={<Programs />} />
                     <Route path="/media" element={<Media />} />

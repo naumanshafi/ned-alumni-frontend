@@ -23,23 +23,23 @@ const Navbar = () => {
       <div className="navbar-bottom">
         {/* Logo */}
         <div className="logo" onClick={() => navigate('/')}>
-          <img src="/images/ned_logo.png" alt="NEDAC Logo" />
+          <img src="/images/ned_logo.png" alt="NEDATS Logo" />
         </div>
 
         {/* Navigation Menu */}
         <div className="navbar-menu">
           <span className={isActive('/')} onClick={() => navigate('/')}>Home</span>
-          <span className={isActive('/about')} onClick={() => navigate('/about')}>About</span>
-          <span className={isActive('/board-committees')} onClick={() => navigate('/board-committees')}>Board & Committees</span>
-          <span className={isActive('/member')} onClick={() => navigate('/member')}>Member</span>
+          <span className={isActive('/nedats')} onClick={() => navigate('/nedats')}>Alumni Association</span>
+          <span className={isActive('/programs')} onClick={() => navigate('/programs')}>Programs</span>
+          <span className={isActive('/member')} onClick={() => navigate('/member')}>TBD</span>
           <div className="menu-item dropdown">
-            <span>Programs</span>
+            <span>Events</span>
             <div className="dropdown-content">
-              <span onClick={() => navigate('/programs/upcoming')}>Upcoming Events</span>
-              <span onClick={() => navigate('/programs/past')}>Past Events</span>
+              <span onClick={() => navigate('/events/upcoming')}>Upcoming Events</span>
+              <span onClick={() => navigate('/events/past')}>Past Events</span>
             </div>
           </div>
-          <span className={isActive('/media')} onClick={() => navigate('/media')}>Media</span>
+          <span className={isActive('/news')} onClick={() => navigate('/news')}>News</span>
         </div>
 
         {/* Auth Buttons */}

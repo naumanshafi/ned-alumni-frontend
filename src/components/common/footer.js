@@ -7,24 +7,23 @@ const Footer = () => {
       <div className="footer-container">
         {/* About Section */}
         <div className="footer-section footer-about">
-          <h3 className="footer-title">NEDAC</h3>
+          <h3 className="footer-title">NEDATS</h3>
           <p className="footer-text">
-            NEDAC is one of the largest alumni associations of any 
-            Pakistani institution in the world. It has over 800 registered 
-            members and growing fast.
+            NED Alumni Association of Tri-State<br></br>
+            [NY, NJ, CT]
           </p>
           <div className="footer-contact-info">
             <div className="footer-contact">
               <img src="/images/email-icon.svg" alt="Email" className="footer-icon" />
               <a href="mailto:info@nedalumniAmerica.org" className="footer-email">
-                info@nedalumniAmerica.org
+                info@nedats.org
               </a>
             </div>
             <div className="footer-address">
               <img src="/images/location-icon.svg" alt="Location" className="footer-icon" />
-              <p className="footer-address-text">
-                624 Highglen Avenue, Markham, ON, L3S 4P6
-              </p>
+              <div className="footer-address-text">
+                9 Bosko Dr. East Brunswick, NJ 08816
+              </div>
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} NED ALUMNI ASSOCIATION America
+            © {new Date().getFullYear()} NED Alumni Association of Tri-State [NY, NJ, CT]
           </p>
           <div className="footer-legal">
             <a href="/legal" className="footer-legal-link">Legal</a>

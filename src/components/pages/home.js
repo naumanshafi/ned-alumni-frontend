@@ -13,29 +13,31 @@ const Home = () => {
                 alt="Small Icon"
                 class="icon-small"
               />
-              <span class="text-primary">NED ALUMNI Association of Tri-State</span>
+              <span class="text-primary">NED Alumni Association of Tri-State</span>
             </div>
             <span class="text-heading">
-              Explore Boundless Opportunities at NED
+              Tagline for the alumni and NED
             </span>
           </div>
           <div class="home-details">
             <span class="text-secondary">
-              Since 2006, NED Alumni America has been delivering programs to
-              promote networking, skills enhancement, and leadership
-              development among NEDUET graduates across America
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
           </div>
-        </div>
+    </div>
 
-        <div class="image-gallery-container">
-            <img
-              src="/images/rectangle106918262-ztwe-400h.png"
-              alt="Gallery Image"
-              class="gallery-main-image"
-            />
-        </div>
-        <Event />
+    <div class="image-gallery-container">
+        <img
+            src="/images/rectangle106918262-ztwe-400h.png"
+            alt="Gallery Image"
+            class="gallery-main-image"
+        />
+    </div>
+
+    <Event />
+
         <div class="centennial-section">
               <div class="centennial-info">
                   <div class="centennial-header">
