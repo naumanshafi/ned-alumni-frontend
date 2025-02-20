@@ -28,28 +28,12 @@ const Home = () => {
           </div>
         </div>
 
-        <div class="social-gallary-container">
-          <div class="social-links-container">
-            <div class="social-link">
-              <img src="/images/youtube-icon.svg" alt="YouTube" />
-            </div>
-            <div class="social-link">
-              <img src="/images/linkedin-icon.svg" alt="LinkedIn" />
-            </div>
-            <div class="social-link">
-              <img src="/images/instagram-icon.svg" alt="Instagram" />
-            </div>
-            <div class="social-link">
-              <img src="/images/facebook-icon.svg" alt="Facebook" />
-            </div>
-          </div>
-          <div class="image-gallery-container">
+        <div class="image-gallery-container">
             <img
               src="/images/rectangle106918262-ztwe-400h.png"
               alt="Gallery Image"
               class="gallery-main-image"
             />
-          </div>
         </div>
         <Event />
         <div class="centennial-section">
@@ -66,7 +50,7 @@ const Home = () => {
                       <span>tradition</span>
                   </span>
                   <span class="centennial-description">
-                      NED Alumni America celebrated NEDUET’s 100th anniversary at its
+                      NED Alumni America celebrated NEDUET's 100th anniversary at its
                       14th annual dinner on Dec 5, 2022 in Mississauga, Ontario. The
                       event coincided with the 15th anniversary of NED Alumni
                       America. The President of NEDAC, Ms. Nazli Khan welcomed the

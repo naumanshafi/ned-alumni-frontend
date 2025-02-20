@@ -134,34 +134,10 @@
     border-radius: 5px;
   }
   
-  .social-gallary-container{
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-links-container {
-    gap: 20px;
-    display: flex;
-    padding: 0 0 32px;
-    position: relative;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .social-link {
-    width: 32px;
-    height: 19.69px;
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  
   .image-gallery-container {
-    margin-left: 30px;
-    width: 1206px;
+    width: 100%;
     display: flex;
-    flex-shrink: 0;
+    justify-content: center;
   }
   
   .gallery-main-image {
