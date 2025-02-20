@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/css/home.css";
+import Event from '../common/event';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
                 alt="Small Icon"
                 class="icon-small"
               />
-              <span class="text-primary">NEDATS - NED Alumni Association of Tri-State</span>
+              <span class="text-primary">NED ALUMNI Association of Tri-State</span>
             </div>
             <span class="text-heading">
               Explore Boundless Opportunities at NED
@@ -24,19 +25,6 @@ const Home = () => {
               promote networking, skills enhancement, and leadership
               development among NEDUET graduates across America
             </span>
-            <div class="action-buttons">
-              <div class="button-primary">
-                <span class="text-button">Watch Video</span>
-              </div>
-              <div class="link-container">
-                <span class="link-text">Learn more</span>
-                <img
-                  src="/images/icon18262-cbxr.svg"
-                  alt="Arrow Icon"
-                  class="icon-small-arrow"
-                />
-              </div>
-            </div>
           </div>
         </div>
 
@@ -63,55 +51,7 @@ const Home = () => {
             />
           </div>
         </div>
-
-        <div class="fundraising-events-container">
-          <div class="fundraising-section">
-              <div class="fundraising-content">
-                  <span class="fundraising-title">Fundraising NED Cloud</span>
-                  <span class="fundraising-description">
-                      NED Cloud, a project by NED ALUMNI America (NEDAC), is a 
-                      transformative project aimed at revolutionizing cloud 
-                      computing solutions.
-                  </span>
-              </div>
-              <div class="fundraising-image">
-                  <img src="/images/Poster.svg" 
-                       alt="NEDAC Cloud Fundraising Flyer"/>
-              </div>
-          </div>
-      
-          <div class="events-section">
-              <span class="events-title">Upcoming Events :</span>
-              <div class="event-card">
-                  <div class="event-details">
-                      <span class="event-name">NEDAC 17th Annual Gala Dinner 2024</span>
-                      <span class="event-description">
-                          NED Cloud, a project by NED ALUMNI America (NEDAC), is a 
-                          transformative project aimed at revolutionizing cloud 
-                          computing solutions.
-                      </span>
-                      <div class="event-location-date">
-                          <span class="event-location">Apollo Convention Center</span>
-                          <div class="event-date">
-                              <img src="/images/calendar-icon.svg" 
-                                    alt="Event Date" class="event-calendar-icon" />
-                              <span class="event-date-text">Saturday, November 02, 2024</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="event-view-more">
-                      <span class="view-more-text">View More...</span>
-                  </div>
-              </div>
-              <div class="event-navigation">
-                  <img src="/images/arrow-left.svg" 
-                        alt="Scroll Up" class="event-arrow-up" />
-                  <img src="/images/arrow-right.svg" 
-                        alt="Scroll Down" class="event-arrow-down" />
-              </div>
-          </div>
-        </div>
-
+        <Event />
         <div class="centennial-section">
               <div class="centennial-info">
                   <div class="centennial-header">

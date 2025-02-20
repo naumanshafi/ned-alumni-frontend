@@ -1,0 +1,33 @@
+{
+  "featuredContent": {
+    "title": "NED Cloud Project",
+    "description": "NED Cloud, a project by NED ALUMNI America (NEDAC), is a transformative project aimed at revolutionizing cloud computing solutions.",
+    "image": "/images/Poster.svg"
+  },
+  "events": [
+    {
+      "id": 1,
+      "name": "NEDAC 17th Annual Gala Dinner 2024",
+      "description": "Join us for an evening of celebration and networking at our annual gala dinner. Connect with fellow alumni and celebrate our achievements.",
+      "location": "Apollo Convention Center",
+      "date": "Saturday, November 02, 2024",
+      "status": "upcoming"
+    },
+    {
+      "id": 2,
+      "name": "Tech Innovation Summit 2024",
+      "description": "A gathering of tech leaders and innovators discussing the future of technology and its impact on society.",
+      "location": "Digital Conference Hall",
+      "date": "March 15, 2024",
+      "status": "upcoming"
+    },
+    {
+      "id": 3,
+      "name": "Alumni Networking Event",
+      "description": "Network with fellow alumni and industry professionals in this casual networking event.",
+      "location": "Central Business Hub",
+      "date": "April 20, 2024",
+      "status": "upcoming"
+    }
+  ]
+} 

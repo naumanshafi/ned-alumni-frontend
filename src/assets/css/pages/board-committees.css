@@ -1,0 +1,39 @@
+.board-committees-page {
+  padding-top: 120px;
+  min-height: calc(100vh - 120px);
+}
+
+.board-committees-page .page-header {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.board-committees-page .page-header h1 {
+  color: #890c25;
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: 'PayPal Sans Big', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.board-section, .committees-section {
+  margin-bottom: 40px;
+}
+
+.board-section h2, .committees-section h2 {
+  color: #2c2e2f;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: 'PayPal Sans Big', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .board-committees-page .page-header {
+    padding: 30px 0;
+  }
+
+  .board-committees-page .page-header h1 {
+    font-size: 2rem;
+  }
+} 
