@@ -5,22 +5,22 @@ import Event from '../common/event';
 const Home = () => {
   return (
     <>
-    <div class="home-container">
-          <div class="home-content">
-            <div class="home-heading">
+    <div className="home-container">
+          <div className="home-content">
+            <div className="home-heading">
               <img
                 src="/images/ecapsmallsvg18262-dxs.svg"
                 alt="Small Icon"
-                class="icon-small"
+                className="icon-small"
               />
-              <span class="text-primary">NED Alumni Association of Tri-State</span>
+              <span className="text-primary">NED Alumni Association of Tri-State</span>
             </div>
-            <span class="text-heading">
+            <span className="text-heading">
               Tagline for the alumni and NED
             </span>
           </div>
-          <div class="home-details">
-            <span class="text-secondary">
+          <div className="home-details">
+            <span className="text-secondary">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -28,30 +28,30 @@ const Home = () => {
           </div>
     </div>
 
-    <div class="image-gallery-container">
+    <div className="image-gallery-container">
         <img
             src="/images/rectangle106918262-ztwe-400h.png"
             alt="Gallery Image"
-            class="gallery-main-image"
+            className="gallery-main-image"
         />
     </div>
 
     <Event />
 
-        <div class="centennial-section">
-              <div class="centennial-info">
-                  <div class="centennial-header">
-                      <img src="/images/centennial-logo.svg" alt="Centennial Logo" class="centennial-icon" />
-                      <span class="centennial-title">
+        <div className="centennial-section">
+              <div className="centennial-info">
+                  <div className="centennial-header">
+                      <img src="/images/centennial-logo.svg" alt="Centennial Logo" className="centennial-icon" />
+                      <span className="centennial-title">
                           NED UNIVERSITY OF ENGINEERING &amp; TECHNOLOGY CENTENNIAL (1921-2021)
                       </span>
                   </div>
-                  <span class="centennial-subtitle">
-                      <span class="centennial-normal-text">Celebrating a</span>
-                      <span class="centennial-highlight-text">century-old</span>
+                  <span className="centennial-subtitle">
+                      <span className="centennial-normal-text">Celebrating a</span>
+                      <span className="centennial-highlight-text">century-old</span>
                       <span>tradition</span>
                   </span>
-                  <span class="centennial-description">
+                  <span className="centennial-description">
                       NED Alumni America celebrated NEDUET's 100th anniversary at its
                       14th annual dinner on Dec 5, 2022 in Mississauga, Ontario. The
                       event coincided with the 15th anniversary of NED Alumni
@@ -63,52 +63,52 @@ const Home = () => {
                   </span>
               </div>
       
-              <div class="centennial-programs">
-                  <div class="program-column">
-                      <div class="program-card">
-                          <img src="/images/gradient2.svg" alt="Summer Program" class="program-gradient" />
-                          <span class="program-title">Summer Program</span>
+              <div className="centennial-programs">
+                  <div className="program-column">
+                      <div className="program-card">
+                          <img src="/images/gradient2.svg" alt="Summer Program" className="program-gradient" />
+                          <span className="program-title">Summer Program</span>
                       </div>
-                      <div class="program-card">
-                          <img src="/images/gradient2.svg" alt="Undergraduate" class="program-gradient" />
-                          <span class="program-title">Undergraduate</span>
+                      <div className="program-card">
+                          <img src="/images/gradient2.svg" alt="Undergraduate" className="program-gradient" />
+                          <span className="program-title">Undergraduate</span>
                       </div>
                   </div>
       
-                  <div class="program-column">
-                      <div class="program-card">
-                          <img src="/images/gradient3.svg" alt="Summer Program" class="program-gradient" />
-                          <span class="program-title">Summer Program</span>
+                  <div className="program-column">
+                      <div className="program-card">
+                          <img src="/images/gradient3.svg" alt="Summer Program" className="program-gradient" />
+                          <span className="program-title">Summer Program</span>
                       </div>
-                      <div class="program-card">
-                          <img src="/images/gradient4.svg" alt="Online Program" class="program-gradient" />
-                          <span class="program-title">Online Program</span>
+                      <div className="program-card">
+                          <img src="/images/gradient4.svg" alt="Online Program" className="program-gradient" />
+                          <span className="program-title">Online Program</span>
                       </div>
                   </div>
           </div>
-            <div class="centennial-learn-more">
-              <img src="/images/campus-vector.svg" alt="Campus Vector" class="centennial-campus-image" />
-              <div class="learn-more-button">
-                  <span class="learn-more-text">LEARN MORE</span>
-                  <img src="/images/learn-more-icon.svg" alt="Learn More Icon" class="learn-more-icon" />
+            <div className="centennial-learn-more">
+              <img src="/images/campus-vector.svg" alt="Campus Vector" className="centennial-campus-image" />
+              <div className="learn-more-button">
+                  <span className="learn-more-text">LEARN MORE</span>
+                  <img src="/images/learn-more-icon.svg" alt="Learn More Icon" className="learn-more-icon" />
               </div>
           </div>
         </div>
 
-        <div class = "scholarship-container">
-          <div class="scholarship-section">
-            <img src="/images/scholarship-banner.png" alt="Scholarship Banner" class="scholarship-banner" />
+        <div className = "scholarship-container">
+          <div className="scholarship-section">
+            <img src="/images/scholarship-banner.png" alt="Scholarship Banner" className="scholarship-banner" />
         
-            <div class="scholarship-content">
-                <div class="scholarship-header">
-                    <div class="scholarship-title">
-                        <img src="/images/education-icon.svg" alt="Education Icon" class="scholarship-icon" />
-                        <span class="scholarship-heading">SUPPORTING EXCELLENCE IN EDUCATION</span>
+            <div className="scholarship-content">
+                <div className="scholarship-header">
+                    <div className="scholarship-title">
+                        <img src="/images/education-icon.svg" alt="Education Icon" className="scholarship-icon" />
+                        <span className="scholarship-heading">SUPPORTING EXCELLENCE IN EDUCATION</span>
                     </div>
-                    <span class="scholarship-main-title">NED Alumni America Scholarships</span>
+                    <span className="scholarship-main-title">NED Alumni America Scholarships</span>
                 </div>
         
-                <span class="scholarship-description">
+                <span className="scholarship-description">
                     NED Alumni America continues to stand with deserving students and their families through the 
                     NED Alumni America Scholarships. The criteria for scholarship awards are determined on a 
                     need-cum-merit basis by NED University of Engineering &amp; Technology, while the funding 
@@ -119,95 +119,95 @@ const Home = () => {
                     program in the coming years.
                 </span>
         
-                <div class="scholarship-buttons">
-                    <div class="scholarship-learn-more-button">
-                        <span class="button-text">Learn more...</span>
+                <div className="scholarship-buttons">
+                    <div className="scholarship-learn-more-button">
+                        <span className="button-text">Learn more...</span>
                     </div>
-                    <div class="watch-video-button">
-                        <span class="button-text">Watch Video</span>
+                    <div className="watch-video-button">
+                        <span className="button-text">Watch Video</span>
                     </div>
                 </div>
             </div>
           </div>
         </div> 
 
-        <div class="join-ned-section">
-            <div class="ned-header-description">
-              <div class="join-ned-header">
-                  <div class="join-ned-title">
-                      <img src="/images/centennial-logo.svg" alt="Education Icon" class="join-ned-icon" />
-                      <span class="join-ned-heading">DELIVERING REAL VALUE</span>
+        <div className="join-ned-section">
+            <div className="ned-header-description">
+              <div className="join-ned-header">
+                  <div className="join-ned-title">
+                      <img src="/images/centennial-logo.svg" alt="Education Icon" className="join-ned-icon" />
+                      <span className="join-ned-heading">DELIVERING REAL VALUE</span>
                   </div>
-                  <span class="join-ned-main-title">
-                      <span class="highlight-text">Join NED</span> Alumni America
+                  <span className="join-ned-main-title">
+                      <span className="highlight-text">Join NED</span> Alumni America
                   </span>
               </div>
         
-              <div class="join-ned-description">
-                  <span class="join-ned-text">
+              <div className="join-ned-description">
+                  <span className="join-ned-text">
                       We welcome all NED alumni in America to join us and become part of a vibrant 
                       network of professionals, entrepreneurs, and community leaders.
                   </span>
               </div>
             </div>
 
-          <div class="join-ned-benefits">
-              <div class="benefit-card">
-                  <div class="benefit-image">
-                      <div class="image-overlay">
-                        <img src="/images/network.png" alt="Network Image" class="benefit-img"/>
+          <div className="join-ned-benefits">
+              <div className="benefit-card">
+                  <div className="benefit-image">
+                      <div className="image-overlay">
+                        <img src="/images/network.png" alt="Network Image" className="benefit-img"/>
                       </div>
                   </div>
-                  <span class="benefit-title">Network</span>
-                  <span class="benefit-description">Connect and catch up with fellow NED alumni</span>
-                  <div class="event-button">
-                      <span class="event-text">Our Event</span>
+                  <span className="benefit-title">Network</span>
+                  <span className="benefit-description">Connect and catch up with fellow NED alumni</span>
+                  <div className="event-button">
+                      <span className="event-text">Our Event</span>
                   </div>
               </div>
       
-              <div class="benefit-card">
-                  <div class="benefit-image">
-                      <div class="image-overlay">
-                        <img src="/images/grow.png" alt="Network Image" class="benefit-img"/>
+              <div className="benefit-card">
+                  <div className="benefit-image">
+                      <div className="image-overlay">
+                        <img src="/images/grow.png" alt="Network Image" className="benefit-img"/>
                       </div>
                   </div>
-                  <span class="benefit-title">Grow</span>
-                  <span class="benefit-description">Develop as a leader by participating in our programs</span>
-                  <div class="event-button">
-                      <span class="event-text">Our Event</span>
+                  <span className="benefit-title">Grow</span>
+                  <span className="benefit-description">Develop as a leader by participating in our programs</span>
+                  <div className="event-button">
+                      <span className="event-text">Our Event</span>
                   </div>
               </div>
       
-              <div class="benefit-card">
-                  <div class="benefit-image">
-                      <div class="image-overlay">
-                        <img src="/images/impact.png" alt="Network Image" class="benefit-img"/>
+              <div className="benefit-card">
+                  <div className="benefit-image">
+                      <div className="image-overlay">
+                        <img src="/images/impact.png" alt="Network Image" className="benefit-img"/>
                       </div>
                   </div>
-                  <span class="benefit-title">Make Impact</span>
-                  <span class="benefit-description">
+                  <span className="benefit-title">Make Impact</span>
+                  <span className="benefit-description">
                       Create a real impact for your alma mater and future scholars
                   </span>
-                  <div class="event-button">
-                      <span class="event-text">Our Event</span>
+                  <div className="event-button">
+                      <span className="event-text">Our Event</span>
                   </div>
               </div>
           </div>
         </div>
 
-        <div class="alumni-convention">
-          <div class="alumni-convention-content">
-              <div class="alumni-convention-header">
-                  <div class="alumni-convention-title">
-                      <img src="/images/centennial-logo.svg" alt="Education Icon" class="alumni-convention-icon" />
-                      <span class="alumni-convention-heading">SUPPORTING EXCELLENCE IN EDUCATION</span>
+        <div className="alumni-convention">
+          <div className="alumni-convention-content">
+              <div className="alumni-convention-header">
+                  <div className="alumni-convention-title">
+                      <img src="/images/centennial-logo.svg" alt="Education Icon" className="alumni-convention-icon" />
+                      <span className="alumni-convention-heading">SUPPORTING EXCELLENCE IN EDUCATION</span>
                   </div>
-                  <span class="alumni-convention-main-title">
-                      <span class="highlight-text">NEDUET</span> Centennial Convention 2022
+                  <span className="alumni-convention-main-title">
+                      <span className="highlight-text">NEDUET</span> Centennial Convention 2022
                   </span>
               </div>
       
-              <span class="alumni-convention-description">
+              <span className="alumni-convention-description">
                   NED International Alumni Network (NEDIAN) Association organized
                   the 2022 Centennial Alumni Convention as the prestigious alma
                   mater turned 100 years old. Following the benchmark set in the 2019
@@ -215,18 +215,18 @@ const Home = () => {
                   and around the world.
               </span>
       
-              <div class="alumni-convention-buttons">
-                  <div class="learn-more-button-1">
-                      <span class="button-text">Learn more...</span>
+              <div className="alumni-convention-buttons">
+                  <div className="learn-more-button-1">
+                      <span className="button-text">Learn more...</span>
                   </div>
-                  <div class="watch-video-button">
-                      <span class="button-text">Watch Video</span>
+                  <div className="watch-video-button">
+                      <span className="button-text">Watch Video</span>
                   </div>
               </div>
           </div>
       
-          <div class="alumni-convention-image">
-              <img src="/images/100-year-anniversary.svg" alt="100 Year Anniversary" class="alumni-convention-img"/>
+          <div className="alumni-convention-image">
+              <img src="/images/100-year-anniversary.svg" alt="100 Year Anniversary" className="alumni-convention-img"/>
           </div>
         </div>
     </>
