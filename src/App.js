@@ -10,27 +10,30 @@ import Events from './components/pages/Events';
 import Member from './components/pages/Member';
 import Programs from './components/pages/Events';
 import Media from './components/pages/Media';
+import { AuthProvider } from './context/AuthContext';
 
 import './App.css';
 
 const App = () => {
     return (
-        <Router>
-            <div className="main">
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/nedats" element={<Nedats />} />
-                    <Route path="/Events" element={<Events />} />
-                    <Route path="/member" element={<Member />} />
-                    <Route path="/programs" element={<Programs />} />
-                    <Route path="/media" element={<Media />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
-                <Footer />
-            </div>
-        </Router>
+        <AuthProvider>
+            <Router>
+                <div className="main">
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/nedats" element={<Nedats />} />
+                        <Route path="/Events" element={<Events />} />
+                        <Route path="/member" element={<Member />} />
+                        <Route path="/programs" element={<Programs />} />
+                        <Route path="/media" element={<Media />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </Routes>
+                    <Footer />
+                </div>
+            </Router>
+        </AuthProvider>
     );
 };
 

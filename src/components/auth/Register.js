@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../../assets/css/Register.css'; // Add your styles here
-import AuthService from './AuthService'; // Import the API service for registration
+import '../../assets/css/Register.css';
+import AuthService from './AuthService';
 
 const Register = () => {
   const [formData, setFormData] = useState({

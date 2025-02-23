@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 import '../../assets/css/Login.css';
-import api from '../auth/AuthService'; // Import the API methods
 
 const Login = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
+  const { setIsAuthenticated } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,26 +21,37 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await api.login(formData); // Call the login API
-      console.log('Login successful:', response.data);
-      // Handle successful login (e.g., save token, redirect)
-    } catch (error) {
-      console.error('Login failed:', error.response?.data || error.message);
-      // Handle login failure (e.g., show error message)
+    
+    if (formData.email && formData.password) {
+      const dummyToken = 'dummy-auth-token-12345';
+      localStorage.setItem('token', dummyToken);
+      setIsAuthenticated(true);
+      navigate('/');
+    } else {
+      setPopupMessage('Please enter both email and password');
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
     }
   };
 
   const goToRegister = () => {
-    navigate('/register'); // Navigate to the registration page
+    navigate('/register');
   };
 
   return (
     <div className="login-container">
+      {showPopup && (
+        <div className="popup-message">
+          <div className="popup-content">
+            <span>{popupMessage}</span>
+          </div>
+        </div>
+      )}
       <div className="login-row">
-        {/* Left Section */}
         <div className="login-col">
           <div className="login-left">
             <div className="text-center">
@@ -52,9 +66,7 @@ const Login = () => {
 
             <form onSubmit={handleSubmit} className="login-form">
               <div className="form-group">
-                <label htmlFor="email" className="form-label">
-                  Email address
-                </label>
+                <label htmlFor="email" className="form-label">Email address</label>
                 <input
                   type="email"
                   id="email"
@@ -68,9 +80,7 @@ const Login = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
+                <label htmlFor="password" className="form-label">Password</label>
                 <input
                   type="password"
                   id="password"
@@ -84,27 +94,20 @@ const Login = () => {
               </div>
 
               <div className="form-actions">
-                <button type="submit" className="btn btn-primary">
-                  Sign In
-                </button>
-                <a href="#" className="forgot-password">
-                  Forgot password?
-                </a>
+                <button type="submit" className="btn btn-primary">Sign In</button>
+                <a href="#" className="forgot-password">Forgot password?</a>
               </div>
             </form>
 
             <div className="signup-section">
               <p className="signup-text">
                 Don't have an account?{' '}
-                <button className="signup-link" onClick={goToRegister}>
-                  Signup
-                </button>
+                <button className="signup-link" onClick={goToRegister}>Signup</button>
               </p>
             </div>
           </div>
         </div>
 
-        {/* Right Section */}
         <div className="login-col">
           <div className="login-right">
             <div className="info-section">
