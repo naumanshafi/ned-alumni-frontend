@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import '../../assets/css/Login.css';
+import AuthService from './AuthService';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,10 +26,23 @@ const Login = () => {
     e.preventDefault();
     
     if (formData.email && formData.password) {
-      const dummyToken = 'dummy-auth-token-12345';
-      localStorage.setItem('token', dummyToken);
-      setIsAuthenticated(true);
-      navigate('/');
+      AuthService.login(formData)
+        .then(data => {
+          setIsAuthenticated(true);
+          navigate('/');
+        })
+        .catch(error => {
+          setPopupMessage(error.message || 'Login failed. Please check your credentials.');
+          setShowPopup(true);
+          console.error('Login error:', error);
+        })
+        .finally(() => {
+          if (showPopup) {
+            setTimeout(() => {
+              setShowPopup(false);
+            }, 3000);
+          }
+        });
     } else {
       setPopupMessage('Please enter both email and password');
       setShowPopup(true);
@@ -68,7 +82,7 @@ const Login = () => {
               <div className="form-group">
                 <label htmlFor="email" className="form-label">Email address</label>
                 <input
-                  type="email"
+                  type="string"
                   id="email"
                   name="email"
                   value={formData.email}

@@ -1,18 +1,53 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
-import CONFIG from '../../config';
+import { AUTH_ENDPOINTS } from '../../constants/apiEndpoints';
 
-const API_BASE_URL = CONFIG.API_BASE_URL;
+class AuthService {
+    login(credentials) {
+        return axios.post(AUTH_ENDPOINTS.LOGIN, {
+            username: credentials.email,
+            password: credentials.password
+        })
+        .then(response => {
+            if (response.data.success) {
+                // Store user data and token
+                this.setToken(response.data.userData.token);
+                this.setUserData(response.data.userData);
+                return response.data;
+            }
+            return Promise.reject(response.data);
+        });
+    }
 
-const register = (data) => {
-    return axios.post(`${API_BASE_URL}/members/register/`, data);
-};
+    register(data) {
+        return axios.post(AUTH_ENDPOINTS.REGISTER, data);
+    }
 
-const login = (data) => {
-    return axios.get(`${API_BASE_URL}/members/login/`, data);
-};
+    logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userData');
+    }
 
-export default {
-    register,
-    login,
-};
+    setToken(token) {
+        localStorage.setItem('token', token);
+    }
+
+    getToken() {
+        return localStorage.getItem('token');
+    }
+
+    setUserData(userData) {
+        localStorage.setItem('userData', JSON.stringify(userData));
+    }
+
+    getUserData() {
+        const userData = localStorage.getItem('userData');
+        return userData ? JSON.parse(userData) : null;
+    }
+
+    isAuthenticated() {
+        return !!this.getToken();
+    }
+}
+
+export default new AuthService();

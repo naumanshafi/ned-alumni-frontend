@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext';
+import AuthService from '../auth/AuthService';
 import "../../assets/css/navbar.css";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
   const currentPath = location.pathname;
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    AuthService.logout();
     setIsAuthenticated(false);
     navigate('/');
   };
