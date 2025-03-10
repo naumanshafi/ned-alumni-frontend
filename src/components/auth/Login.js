@@ -8,11 +8,15 @@ const Login = () => {
   const navigate = useNavigate();
   const { setIsAuthenticated } = useContext(AuthContext);
   const [formData, setFormData] = useState({
-    email: '',
+    username: '',
     password: '',
   });
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
+  const [errors, setErrors] = useState({
+    username: '',
+    password: '',
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,35 +24,78 @@ const Login = () => {
       ...formData,
       [name]: value,
     });
+    setErrors({
+      ...errors,
+      [name]: '',
+    });
+  };
+
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = {
+      username: '',
+      password: '',
+    };
+
+    if (!formData.username.trim()) {
+      newErrors.username = 'Username is required';
+      isValid = false;
+    }
+
+    if (!formData.password) {
+      newErrors.password = 'Password is required';
+      isValid = false;
+    } else if (formData.password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const showErrorPopup = (message) => {
+    setPopupMessage(message);
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (formData.email && formData.password) {
+    if (validateForm()) {
       AuthService.login(formData)
         .then(data => {
           setIsAuthenticated(true);
           navigate('/');
         })
         .catch(error => {
-          setPopupMessage(error.message || 'Login failed. Please check your credentials.');
-          setShowPopup(true);
-          console.error('Login error:', error);
-        })
-        .finally(() => {
-          if (showPopup) {
-            setTimeout(() => {
-              setShowPopup(false);
-            }, 3000);
+          if (error.response) {
+            switch (error.response.status) {
+              case 401:
+                showErrorPopup('Invalid username or password');
+                break;
+              case 404:
+                showErrorPopup('Account not found');
+                break;
+              case 403:
+                showErrorPopup('Account is locked. Please contact support');
+                break;
+              default:
+                showErrorPopup('An error occurred during login. Please try again');
+            }
+          } else {
+            showErrorPopup('Unable to connect to the server. Please try again later');
           }
+          console.error('Login error:', error);
         });
     } else {
-      setPopupMessage('Please enter both email and password');
-      setShowPopup(true);
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
+      const firstError = Object.values(errors).find(error => error !== '');
+      if (firstError) {
+        showErrorPopup(firstError);
+      }
     }
   };
 
@@ -74,23 +121,23 @@ const Login = () => {
                 alt="logo"
                 className="logo"
               />
-              <h4 className="title">NED ALUMNI ASSOCIATE OF TIR STATE</h4>
+              <h4 className="title">NED ALUMNI ASSOCIATE OF TRI STATE</h4>
             </div>
             <p className="subtitle">Please login to your account</p>
 
             <form onSubmit={handleSubmit} className="login-form">
               <div className="form-group">
-                <label htmlFor="email" className="form-label">Email address</label>
+                <label htmlFor="username" className="form-label">Username</label>
                 <input
-                  type="string"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={formData.username}
                   onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your email"
-                  required
+                  className={`form-control ${errors.username ? 'error' : ''}`}
+                  placeholder="Enter your username"
                 />
+                {errors.username && <span className="error-message">{errors.username}</span>}
               </div>
 
               <div className="form-group">
@@ -101,10 +148,10 @@ const Login = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="form-control"
+                  className={`form-control ${errors.password ? 'error' : ''}`}
                   placeholder="Enter your password"
-                  required
                 />
+                {errors.password && <span className="error-message">{errors.password}</span>}
               </div>
 
               <div className="form-actions">
