@@ -536,3 +536,171 @@
     display: block;
   }
 }
+
+/* Logout Confirmation Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.logout-modal {
+  background-color: white;
+  border-radius: 16px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(137, 12, 37, 0.05);
+  overflow: hidden;
+  animation: modalEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center center;
+}
+
+.modal-body {
+  padding: 36px 28px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.modal-icon {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #fff1f2, #fee2e2);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(137, 12, 37, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.modal-content {
+  flex: 1;
+}
+
+.modal-content h4 {
+  margin: 0 0 8px 0;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  padding: 20px 28px 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid #f1f5f9;
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+}
+
+.cancel-button {
+  background-color: white;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel-button:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cancel-button:active {
+  transform: translateY(0);
+}
+
+.confirm-button {
+  background: linear-gradient(135deg, #890c25, #7a0b21);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-button:hover {
+  background: linear-gradient(135deg, #7a0b21, #6a0a1d);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(137, 12, 37, 0.2);
+}
+
+.confirm-button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Make sure modal is responsive */
+@media screen and (max-width: 576px) {
+  .logout-modal {
+    width: 340px;
+  }
+  
+  .modal-body {
+    padding: 28px 20px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .modal-footer {
+    padding: 16px 20px 24px;
+    flex-direction: column;
+  }
+  
+  .cancel-button, .confirm-button {
+    width: 100%;
+    padding: 14px;
+  }
+}

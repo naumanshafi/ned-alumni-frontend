@@ -5,17 +5,26 @@ import { AUTH_ENDPOINTS } from '../../constants/apiEndpoints';
 class AuthService {
     login(credentials) {
         return axios.post(AUTH_ENDPOINTS.LOGIN, {
-            username: credentials.email,
+            username: credentials.username,
             password: credentials.password
         })
         .then(response => {
-            if (response.data.success) {
+            // Check if response.data exists and has a success property
+            if (response.data && response.data.success === true) {
                 // Store user data and token
                 this.setToken(response.data.userData.token);
                 this.setUserData(response.data.userData);
-                return response.data;
             }
-            return Promise.reject(response.data);
+            // Always return the response data, even if success is false
+            return response.data;
+        })
+        .catch(error => {
+            // If the server returned a response with data, return that data
+            if (error.response && error.response.data) {
+                return error.response.data;
+            }
+            // Otherwise, rethrow the error to be caught by the component
+            throw error;
         });
     }
 

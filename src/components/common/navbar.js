@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext';
 import AuthService from '../auth/AuthService';
@@ -9,11 +9,21 @@ const Navbar = () => {
   const location = useLocation();
   const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
   const currentPath = location.pathname;
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
-  const handleLogout = () => {
+  const initiateLogout = () => {
+    setShowLogoutConfirm(true);
+  };
+
+  const confirmLogout = () => {
     AuthService.logout();
     setIsAuthenticated(false);
     navigate('/');
+    setShowLogoutConfirm(false);
+  };
+
+  const cancelLogout = () => {
+    setShowLogoutConfirm(false);
   };
 
   const handleAccountSettings = () => {
@@ -49,7 +59,7 @@ const Navbar = () => {
                 </svg>
                 Account Settings
               </button>
-              <button className="logout-button" onClick={handleLogout}>
+              <button className="logout-button" onClick={initiateLogout}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-right" viewBox="0 0 16 16">
                   <path fillRule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
                   <path fillRule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
@@ -70,34 +80,63 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-top"></div>
-      <div className="navbar-bottom">
-        {/* Logo */}
-        <div className="logo" onClick={() => navigate('/')}>
-          <img src="/images/ned_logo.png" alt="NEDATS Logo" />
-        </div>
+    <>
+      <nav className="navbar">
+        <div className="navbar-top"></div>
+        <div className="navbar-bottom">
+          {/* Logo */}
+          <div className="logo" onClick={() => navigate('/')}>
+            <img src="/images/ned_logo.png" alt="NEDATS Logo" />
+          </div>
 
-        {/* Navigation Menu */}
-        <div className="navbar-menu">
-          <span className={isActive('/')} onClick={() => navigate('/')}>Home</span>
-          <span className={isActive('/nedats')} onClick={() => navigate('/nedats')}>Alumni Association</span>
-          <span className={isActive('/programs')} onClick={() => navigate('/programs')}>Programs</span>
-          <span className={isActive('/member')} onClick={() => navigate('/member')}>TBD</span>
-          <div className="menu-item dropdown">
-            <span>Events</span>
-            <div className="dropdown-content">
-              <span onClick={() => navigate('/events/upcoming')}>Upcoming Events</span>
-              <span onClick={() => navigate('/events/past')}>Past Events</span>
+          {/* Navigation Menu */}
+          <div className="navbar-menu">
+            <span className={isActive('/')} onClick={() => navigate('/')}>Home</span>
+            <span className={isActive('/nedats')} onClick={() => navigate('/nedats')}>Alumni Association</span>
+            <span className={isActive('/programs')} onClick={() => navigate('/programs')}>Programs</span>
+            <span className={isActive('/member')} onClick={() => navigate('/member')}>TBD</span>
+            <div className="menu-item dropdown">
+              <span>Events</span>
+              <div className="dropdown-content">
+                <span onClick={() => navigate('/events/upcoming')}>Upcoming Events</span>
+                <span onClick={() => navigate('/events/past')}>Past Events</span>
+              </div>
+            </div>
+            <span className={isActive('/news')} onClick={() => navigate('/news')}>News</span>
+          </div>
+
+          {/* Auth Section */}
+          {renderAuthSection()}
+        </div>
+      </nav>
+
+      {/* Logout Confirmation Modal */}
+      {showLogoutConfirm && (
+        <div className="modal-overlay" onClick={cancelLogout}>
+          <div className="logout-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-body">
+              <div className="modal-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#890c25" className="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                  <path fillRule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>
+              </div>
+              <div className="modal-content">
+                <p>Are you sure you want to end your current session?</p>
+              </div>
+            </div>
+            <div className="modal-footer">
+              <button className="cancel-button" onClick={cancelLogout}>
+                <span>Cancel</span>
+              </button>
+              <button className="confirm-button" onClick={confirmLogout}>
+                <span>Yes, Log Out</span>
+              </button>
             </div>
           </div>
-          <span className={isActive('/news')} onClick={() => navigate('/news')}>News</span>
         </div>
-
-        {/* Auth Section */}
-        {renderAuthSection()}
-      </div>
-    </nav>
+      )}
+    </>
   );
 };
 

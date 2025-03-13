@@ -13,6 +13,7 @@ const Login = () => {
   });
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
+  const [popupType, setPopupType] = useState('error');
   const [errors, setErrors] = useState({
     username: '',
     password: '',
@@ -24,10 +25,13 @@ const Login = () => {
       ...formData,
       [name]: value,
     });
-    setErrors({
-      ...errors,
-      [name]: '',
-    });
+    
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: '',
+      });
+    }
   };
 
   const validateForm = () => {
@@ -54,47 +58,55 @@ const Login = () => {
     return isValid;
   };
 
-  const showErrorPopup = (message) => {
+  const showMessage = (message, type = 'error') => {
+    console.log('Showing message:', message, 'with type:', type);
+    console.log('Showing ShowPopup:', showPopup);
     setPopupMessage(message);
+    setPopupType(type);
     setShowPopup(true);
+    
     setTimeout(() => {
       setShowPopup(false);
-    }, 3000);
+    }, 4000);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
     if (validateForm()) {
+      // Show loading state if needed
+      
       AuthService.login(formData)
-        .then(data => {
-          setIsAuthenticated(true);
-          navigate('/');
+        .then(response => {
+          
+          // Check if the response contains success flag
+          if (!response || response.success === false) {
+            // API returned an error message
+            const errorMessage = response && response.message 
+              ? response.message 
+              : 'Login failed. Please try again.';
+            
+            showMessage(errorMessage);
+            return;
+          }
+          
+          // If we reach here, login was successful
+          showMessage('Login successful! Redirecting...', 'success');
+          setTimeout(() => {
+            setIsAuthenticated(true);
+            navigate('/');
+          }, 1000);
         })
         .catch(error => {
-          if (error.response) {
-            switch (error.response.status) {
-              case 401:
-                showErrorPopup('Invalid username or password');
-                break;
-              case 404:
-                showErrorPopup('Account not found');
-                break;
-              case 403:
-                showErrorPopup('Account is locked. Please contact support');
-                break;
-              default:
-                showErrorPopup('An error occurred during login. Please try again');
-            }
-          } else {
-            showErrorPopup('Unable to connect to the server. Please try again later');
-          }
           console.error('Login error:', error);
+          
+          // Network or server error
+          showMessage('Unable to connect to the server. Please check your internet connection and try again.');
         });
     } else {
       const firstError = Object.values(errors).find(error => error !== '');
       if (firstError) {
-        showErrorPopup(firstError);
+        showMessage(firstError);
       }
     }
   };
@@ -105,16 +117,26 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      {showPopup && (
-        <div className="popup-message">
-          <div className="popup-content">
-            <span>{popupMessage}</span>
-          </div>
-        </div>
-      )}
       <div className="login-row">
         <div className="login-col">
           <div className="login-left">
+            {showPopup && (
+              <div className={`inline-popup-message ${popupType}`}>
+                <div className="popup-content">
+                  {popupType === 'error' && (
+                    <i className="fas fa-exclamation-circle" style={{ marginRight: '10px', color: '#dc3545' }}></i>
+                  )}
+                  {popupType === 'success' && (
+                    <i className="fas fa-check-circle" style={{ marginRight: '10px', color: '#28a745' }}></i>
+                  )}
+                  {popupType === 'warning' && (
+                    <i className="fas fa-exclamation-triangle" style={{ marginRight: '10px', color: '#ffc107' }}></i>
+                  )}
+                  <span>{popupMessage}</span>
+                </div>
+              </div>
+            )}
+            
             <div className="text-center">
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
@@ -134,10 +156,10 @@ const Login = () => {
                   name="username"
                   value={formData.username}
                   onChange={handleChange}
-                  className={`form-control ${errors.username ? 'error' : ''}`}
+                  className={`form-control ${errors.username ? 'is-invalid' : ''}`}
                   placeholder="Enter your username"
                 />
-                {errors.username && <span className="error-message">{errors.username}</span>}
+                {errors.username && <div className="error-text">{errors.username}</div>}
               </div>
 
               <div className="form-group">
@@ -148,10 +170,10 @@ const Login = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className={`form-control ${errors.password ? 'error' : ''}`}
+                  className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                   placeholder="Enter your password"
                 />
-                {errors.password && <span className="error-message">{errors.password}</span>}
+                {errors.password && <div className="error-text">{errors.password}</div>}
               </div>
 
               <div className="form-actions">
