@@ -95,6 +95,7 @@ const Navbar = () => {
             <span className={isActive('/nedats')} onClick={() => navigate('/nedats')}>Alumni Association</span>
             <span className={isActive('/programs')} onClick={() => navigate('/programs')}>Programs</span>
             <span className={isActive('/member')} onClick={() => navigate('/member')}>TBD</span>
+            <span className={isActive('/board-members')} onClick={() => navigate('/board-members')}>Board Members</span>
             <div className="menu-item dropdown">
               <span>Events</span>
               <div className="dropdown-content">

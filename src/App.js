@@ -10,6 +10,9 @@ import Events from './components/pages/Events';
 import Member from './components/pages/Member';
 import Programs from './components/pages/Events';
 import Media from './components/pages/Media';
+import BoardMembers from './components/pages/BoardMembers';
+import BoardMembersGrid from './components/pages/BoardMembersGrid';
+
 import { AuthProvider } from './context/AuthContext';
 
 import './App.css';
@@ -27,6 +30,7 @@ const App = () => {
                         <Route path="/member" element={<Member />} />
                         <Route path="/programs" element={<Programs />} />
                         <Route path="/media" element={<Media />} />
+                        <Route path="/board-members" element={<BoardMembersGrid />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                     </Routes>
