@@ -1,0 +1,293 @@
+.board-members-container {
+  max-width: 1200px;
+  margin: 3rem auto 5rem;
+  padding: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Header Styling */
+.board-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.subtitle {
+  color: #890c25;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title-underline {
+  width: 220px;
+  height: 4px;
+  background-color: #890c25;
+  margin: 0.5rem auto 2rem;
+}
+
+/* Description Styling */
+.board-description {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* Scroll Hint */
+.scroll-hint {
+  text-align: center;
+  margin: 2rem auto;
+  font-style: italic;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Board Members List */
+.board-members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.member-profile {
+  width: 100%;
+}
+
+.member-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.member-photo {
+  flex: 0 0 300px;
+  max-width: 300px;
+  position: relative;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #890c25;
+  color: white;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.member-details {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name-title {
+  margin-bottom: 1.5rem;
+}
+
+.member-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.member-title {
+  color: #890c25;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.member-batch {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+.member-bio {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.member-bio p {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1rem;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.member-bio p.collapsed {
+  max-height: 80px;
+}
+
+.member-bio p.expanded {
+  max-height: 500px;
+}
+
+.toggle-bio {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  background: none;
+  border: none;
+  color: #890c25;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: all 0.2s;
+}
+
+.toggle-bio:hover {
+  transform: translateY(-2px);
+}
+
+.member-contact {
+  margin-top: auto;
+}
+
+.contact-button {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #555;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-button:hover {
+  background-color: #890c25;
+  color: white;
+  border-color: #890c25;
+}
+
+/* Vacant Positions */
+.vacant-positions {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.vacant-positions h3 {
+  color: #890c25;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.vacant-position {
+  margin-bottom: 1.5rem;
+}
+
+.vacant-position h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.vacant-position p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .member-card {
+    flex-direction: column;
+  }
+  
+  .member-photo {
+    flex: 0 0 auto;
+    max-width: 100%;
+    height: 300px;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .board-header {
+    margin-bottom: 2rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .member-photo {
+    height: 250px;
+  }
+  
+  .member-details {
+    padding: 1.5rem;
+  }
+  
+  .member-name {
+    font-size: 1.5rem;
+  }
+  
+  .member-title {
+    font-size: 1rem;
+    display: block;
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .member-photo {
+    height: 200px;
+  }
+  
+  .member-details {
+    padding: 1.2rem;
+  }
+  
+  .scroll-hint {
+    font-size: 0.9rem;
+  }
+} 

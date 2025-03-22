@@ -1,0 +1,82 @@
+{
+    "board_period": {
+      "start_date": "July 2022",
+      "end_date": "June 2025"
+    },
+    "description": "The board of directors at NED Alumni is the driving force behind the initiatives to help members connect and grow. They provide strategic leadership and act as the primary liaison with NED University. New board members are elected at the end of every term through a voting process prescribed in the bylaws.",
+    "board": [
+      {
+        "name": "Anas Hashmi",
+        "title": "President",
+        "batch": "1994 (Mechanical Engg.)",
+        "image": "/images/AnasHashmi.png",
+        "contact": "Send email to Anas Hashmi",
+        "bio": "Anas Hashmi has over 20 years of experience in Project Management and Engineering Consulting. After graduating from NED University, he worked with several multinational corporations before taking a leadership role at NEDATS."
+      },
+      {
+        "name": "Shakeel Ahmed",
+        "title": "Vice President",
+        "batch": "1992 (Electrical Engg.)",
+        "image": "/images/ShakeelAhmed.png",
+        "contact": "Send email to Shakeel Ahmed",
+        "bio": "Shakeel Ahmed is a dedicated Professional with over 3 decades of experience in Engineering & Management. He has extensive experience in leadership roles and has been an active member of the alumni association for many years."
+      },
+      {
+        "name": "Maaz Mansoor",
+        "title": "General Secretary",
+        "batch": "1996 (Electrical Engg.)",
+        "image": "/images/MaazMansoor.png",
+        "contact": "Send email to Maaz Mansoor",
+        "bio": "Maaz Mansoor is a PMI accredited PMP and PEO registered P. Eng, a senior member of IEEE. He has years of experience in Project Management and Engineering leadership."
+      },
+      {
+        "name": "Shahbaz Zubairi",
+        "title": "Finance Secretary",
+        "batch": "1998 (Civil Engg.)",
+        "image": "/images/ShahbazZubairi.png",
+        "contact": "Send email to Shahbaz Zubairi",
+        "bio": "Shahbaz Zubairi has a strong background in financial management with over 15 years of experience. He manages the association's finances and ensures transparent financial reporting."
+      },
+      {
+        "name": "Hassan Hashmi",
+        "title": "Social Secretary I",
+        "batch": "2003 (Computer Systems Engg.)",
+        "image": "/images/HassanHashmi.png",
+        "contact": "Send email to Hassan Hashmi",
+        "bio": "Hassan Hashmi is responsible for organizing social events and networking opportunities for alumni. He brings creative energy and innovative ideas to strengthen our community."
+      },
+      {
+        "name": "Vacant",
+        "title": "Social Secretary II",
+        "batch": "",
+        "image": "",
+        "contact": "Position currently vacant",
+        "bio": "This position is currently vacant. Elections for this role will be held in the next general meeting."
+      },
+      {
+        "name": "Badar Bhatti",
+        "title": "Joint Secretary",
+        "batch": "2000 (Mechanical Engg.)",
+        "image": "/images/BadarBhatti.png",
+        "contact": "Send email to Badar Bhatti",
+        "bio": "Badar Bhatti works closely with the General Secretary to coordinate association activities and maintain records. He has been an active member since 2010."
+      },
+      {
+        "name": "Salman Khan",
+        "title": "NED Liaison Secretary",
+        "batch": "1997 (Industrial Engg.)",
+        "image": "/images/SalmanKhan.png",
+        "contact": "Send email to Salman Khan",
+        "bio": "Salman Khan maintains strong connections with NED University, coordinating joint programs and initiatives between the university and alumni association."
+      },
+      {
+        "name": "Habibah Aftab",
+        "title": "Information Secretary",
+        "batch": "2005 (Computer Science)",
+        "image": "/images/HabibahAftab.png",
+        "contact": "Send email to Habibah Aftab",
+        "bio": "Habibah Aftab manages the association's communications channels and ensures members stay informed about news, events, and opportunities."
+      }
+    ]
+  }
+  
