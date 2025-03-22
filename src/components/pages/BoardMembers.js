@@ -34,20 +34,20 @@ const BoardMembers = () => {
         <p>{description}</p>
       </div>
 
-      <div className="scroll-hint">
+{/*       <div className="scroll-hint">
         {period.start_date && period.end_date ? (
           <p>&gt;&gt; Scroll to the bottom to see past board members, election {period.start_date.split(' ')[1]}-{period.end_date.split(' ')[1]} results and announcement video &lt;&lt;</p>
         ) : (
           <p>&gt;&gt; Scroll to the bottom to see past board members, election results and announcement video &lt;&lt;</p>
         )}
       </div>
-
+ */}
       <div className="board-members-list">
         {boardMembers.map((member, index) => (
           member.name !== "Vacant" && (
             <div key={index} className="member-profile">
               <div className="member-card">
-                <div className="member-photo">
+                <div className="member-photos">
                   {member.image ? (
                     <img src={member.image} alt={member.name} />
                   ) : (
