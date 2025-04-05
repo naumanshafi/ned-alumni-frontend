@@ -58,7 +58,7 @@ const BoardMembersGrid = () => {
               {member.batch && <p className="member-batch">Graduated: {member.batch} <br></br>{member.discipline}</p>}
               {member.name !== "Vacant" ? (
                 <button className="contact-button">
-                  <Link to="/bod">Click Here for more</Link>
+                  <Link to="/bod" style={{ textDecoration: 'none', color: 'white'}} >Click here for more details</Link>
                 </button>
               ) : (
                 <p className="vacant-message">{member.bio}</p>

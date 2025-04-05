@@ -178,6 +178,7 @@
   color: white;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 15px rgba(137, 12, 37, 0.2);
 }
 
