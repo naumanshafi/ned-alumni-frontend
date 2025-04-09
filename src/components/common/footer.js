@@ -51,16 +51,24 @@ const Footer = () => {
           <h3 className="footer-section-title">Follow Us</h3>
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon-link">
-              <img src="/images/facebook-icon.svg" alt="Facebook" className="social-icon" />
+              <div className="icon-wrapper">
+                <img src="/images/facebook-icon.svg" alt="Facebook" className="social-icon" />
+              </div>
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon-link">
-              <img src="/images/twitter-icon.svg" alt="Twitter" className="social-icon" />
+              <div className="icon-wrapper">
+                <img src="/images/twitter-icon.svg" alt="Twitter" className="social-icon" />
+              </div>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon-link">
-              <img src="/images/linkedin-icon.svg" alt="LinkedIn" className="social-icon" />
+              <div className="icon-wrapper">
+                <img src="/images/linkedin-icon.svg" alt="LinkedIn" className="social-icon" />
+              </div>
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon-link">
-              <img src="/images/instagram-icon.svg" alt="Instagram" className="social-icon" />
+              <div className="icon-wrapper">
+                <img src="/images/instagram-icon.svg" alt="Instagram" className="social-icon" />
+              </div>
             </a>
           </div>
         </div>
