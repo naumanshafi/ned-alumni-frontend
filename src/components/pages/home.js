@@ -1,39 +1,39 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../../assets/css/home.css";
 import Event from '../common/event';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
-    <div className="home-container">
-          <div className="home-content">
-            <div className="home-heading">
-              <img
-                src="/images/ecapsmallsvg18262-dxs.svg"
-                alt="Small Icon"
-                className="icon-small"
-              />
-              <span className="text-primary">NED Alumni Association of Tri-State</span>
-            </div>
-            <span className="text-heading">
-              Tagline for the alumni and NED
-            </span>
+    <div className="hero-container">
+      <div className="hero-overlay">
+        <div className="welcome-section">
+          <div className="welcome-tag">Welcome to NEDATS</div>
+          <h1 className="hero-title">NED UNIVERSITY<br/>ALUMNI NETWORK</h1>
+          <p className="hero-description">
+            The NED Alumni Association of Tri-State (NJ, NY, CT) is one of the largest NED 
+            alumni associations in the US serving more than 500+ NED alumni across many 
+            disciplines of NED University of Engineering & Technology. Our services include 
+            networking opportunities, professional development, mentorship programs, and community events.
+          </p>
+          <div className="hero-buttons">
+            <button className="view-latest-btn" onClick={() => navigate('/events/upcoming')}>
+              VIEW LATEST EVENT
+            </button>
+            <button className="learn-more-btn" onClick={() => navigate('/about-us')}>
+              LEARN MORE
+            </button>
           </div>
-          <div className="home-details">
-            <span className="text-secondary">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </span>
-          </div>
-    </div>
-
-    <div className="image-gallery-container">
-        <img
-            src="/images/rectangle106918262-ztwe-400h.png"
-            alt="Gallery Image"
-            className="gallery-main-image"
-        />
+        </div>
+      </div>
+      <img
+        src="/images/ned_welcome.jpg"
+        alt="NED University of Engineering and Technology Main Entrance"
+        className="hero-image"
+      />
     </div>
 
     <Event />
@@ -190,6 +190,69 @@ const Home = () => {
                   </span>
                   <div className="event-button">
                       <span className="event-text">Our Event</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div className="nedats-glance-section">
+            <div className="nedats-glance-header-description">
+              <div className="nedats-glance-header">
+                  <div className="nedats-glance-title">
+                      <img src="/images/centennial-logo.svg" alt="Update Icon" className="nedats-glance-icon" />
+                      <span className="nedats-glance-heading">IMPORTANT UPDATES</span>
+                  </div>
+                  <span className="nedats-glance-main-title">
+                      NEDATS <span className="highlight-text">At a Glance</span>
+                  </span>
+              </div>
+        
+              <div className="nedats-glance-description">
+                  <span className="nedats-glance-text">
+                      TBD
+                  </span>
+              </div>
+            </div>
+
+          <div className="nedats-glance-benefits">
+              <div className="glance-card">
+                  <div className="glance-image">
+                      <div className="image-overlay">
+                        <img src="/images/network.png" alt="Feature Image" className="glance-img"/>
+                      </div>
+                  </div>
+                  <span className="glance-title">Community</span>
+                  <span className="glance-description">Join our active community of NED alumni in the Tri-State area</span>
+                  <div className="glance-button">
+                      <span className="glance-text">Learn More</span>
+                  </div>
+              </div>
+      
+              <div className="glance-card">
+                  <div className="glance-image">
+                      <div className="image-overlay">
+                        <img src="/images/grow.png" alt="Feature Image" className="glance-img"/>
+                      </div>
+                  </div>
+                  <span className="glance-title">Events</span>
+                  <span className="glance-description">Participate in our regular networking and community events</span>
+                  <div className="glance-button">
+                      <span className="glance-text">View Calendar</span>
+                  </div>
+              </div>
+      
+              <div className="glance-card">
+                  <div className="glance-image">
+                      <div className="image-overlay">
+                        <img src="/images/impact.png" alt="Feature Image" className="glance-img"/>
+                      </div>
+                  </div>
+                  <span className="glance-title">Resources</span>
+                  <span className="glance-description">
+                      Access exclusive resources and opportunities for NED alumni
+                  </span>
+                  <div className="glance-button">
+                      <span className="glance-text">Explore</span>
                   </div>
               </div>
           </div>
