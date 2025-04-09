@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../assets/css/home.css";
-import Event from '../common/event';
+import EventsHome from '../common/eventshome';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Home = () => {
       <div className="hero-overlay">
         <div className="welcome-section">
           <div className="welcome-tag">Welcome to NEDATS</div>
-          <h1 className="hero-title">NED UNIVERSITY<br/>ALUMNI NETWORK</h1>
+          <h1 className="hero-title">NED Alumni Association <br/>of Tri-State (NEDATS)</h1>
           <p className="hero-description">
             The NED Alumni Association of Tri-State (NJ, NY, CT) is one of the largest NED 
             alumni associations in the US serving more than 500+ NED alumni across many 
@@ -36,64 +36,7 @@ const Home = () => {
       />
     </div>
 
-    <Event />
-
-        <div className="centennial-section">
-              <div className="centennial-info">
-                  <div className="centennial-header">
-                      <img src="/images/centennial-logo.svg" alt="Centennial Logo" className="centennial-icon" />
-                      <span className="centennial-title">
-                          NED UNIVERSITY OF ENGINEERING &amp; TECHNOLOGY CENTENNIAL (1921-2021)
-                      </span>
-                  </div>
-                  <span className="centennial-subtitle">
-                      <span className="centennial-normal-text">Celebrating a</span>
-                      <span className="centennial-highlight-text">century-old</span>
-                      <span>tradition</span>
-                  </span>
-                  <span className="centennial-description">
-                      NED Alumni America celebrated NEDUET's 100th anniversary at its
-                      14th annual dinner on Dec 5, 2022 in Mississauga, Ontario. The
-                      event coincided with the 15th anniversary of NED Alumni
-                      America. The President of NEDAC, Ms. Nazli Khan welcomed the
-                      guests including the guest of honor, Mr. Sohail Bashir; the
-                      keynote speaker, Mr. Aftab Rizvi; the Consul General of
-                      Pakistan in Toronto, Mr. Abdul Hameed Khan, as well as alumni
-                      and their families.
-                  </span>
-              </div>
-      
-              <div className="centennial-programs">
-                  <div className="program-column">
-                      <div className="program-card">
-                          <img src="/images/gradient2.svg" alt="Summer Program" className="program-gradient" />
-                          <span className="program-title">Summer Program</span>
-                      </div>
-                      <div className="program-card">
-                          <img src="/images/gradient2.svg" alt="Undergraduate" className="program-gradient" />
-                          <span className="program-title">Undergraduate</span>
-                      </div>
-                  </div>
-      
-                  <div className="program-column">
-                      <div className="program-card">
-                          <img src="/images/gradient3.svg" alt="Summer Program" className="program-gradient" />
-                          <span className="program-title">Summer Program</span>
-                      </div>
-                      <div className="program-card">
-                          <img src="/images/gradient4.svg" alt="Online Program" className="program-gradient" />
-                          <span className="program-title">Online Program</span>
-                      </div>
-                  </div>
-          </div>
-            <div className="centennial-learn-more">
-              <img src="/images/campus-vector.svg" alt="Campus Vector" className="centennial-campus-image" />
-              <div className="learn-more-button">
-                  <span className="learn-more-text">LEARN MORE</span>
-                  <img src="/images/learn-more-icon.svg" alt="Learn More Icon" className="learn-more-icon" />
-              </div>
-          </div>
-        </div>
+    <EventsHome />
 
         <div className = "scholarship-container">
           <div className="scholarship-section">
@@ -258,7 +201,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="alumni-convention">
+{/*         <div className="alumni-convention">
           <div className="alumni-convention-content">
               <div className="alumni-convention-header">
                   <div className="alumni-convention-title">
@@ -291,7 +234,7 @@ const Home = () => {
           <div className="alumni-convention-image">
               <img src="/images/100-year-anniversary.svg" alt="100 Year Anniversary" className="alumni-convention-img"/>
           </div>
-        </div>
+        </div> */}
     </>
   );
 };

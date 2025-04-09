@@ -7,11 +7,12 @@
   "events": [
     {
       "id": 1,
-      "name": "Eid Gala and Scholarship Awards 2025",
+      "name": "Eid Gala & Scholarship Awards 2025",
       "description": "Join us for an evening of celebration and networking at our annual gala dinner. Connect with fellow alumni and celebrate our achievements.",
       "location": "Marriott Teaneck - NJ",
       "date": "Saturday, April 26, 2025",
-      "status": "upcoming"
+      "status": "upcoming",
+      "image" : "/images/event1.png"
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
       "description": "A gathering of NEDians from North America. Annual gathering. ",
       "location": "To be determined",
       "date": "October 8, 2025",
-      "status": "upcoming"
+      "status": "upcoming",
+      "image": "/images/event2.png"
     },
     {
       "id": 3,
@@ -27,7 +29,8 @@
       "description": "Network with fellow alumni and industry professionals in this casual networking event.",
       "location": "Somewhere in NY",
       "date": "December xx, 2025",
-      "status": "upcoming"
+      "status": "upcoming",
+      "image": "/images/event3.png"
     }
   ]
 } 

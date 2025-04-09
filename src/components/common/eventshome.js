@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import eventData from "../../data/events.json";
 import "../../assets/css/event.css";
 
-const Event = () => {
+const EventsHome = () => {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -12,7 +12,7 @@ const Event = () => {
         setCurrentEventIndex((prevIndex) => 
             prevIndex === eventData.events.length - 1 ? 0 : prevIndex + 1
         );
-        setTimeout(() => setIsAnimating(false), 500);
+        setTimeout(() => setIsAnimating(false), 2000);
     };
 
     const handlePrevEvent = () => {
@@ -21,14 +21,14 @@ const Event = () => {
         setCurrentEventIndex((prevIndex) => 
             prevIndex === 0 ? eventData.events.length - 1 : prevIndex - 1
         );
-        setTimeout(() => setIsAnimating(false), 500);
+        setTimeout(() => setIsAnimating(false), 2000);
     };
 
     // Auto-advance the carousel every 8 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             handleNextEvent();
-        }, 8000);
+        }, 20000);
         
         return () => clearInterval(interval);
     }, []);
@@ -43,12 +43,13 @@ const Event = () => {
     return (
         <div className="events-carousel-section">
             <div className="events-carousel-container">
-                <h2 className="events-carousel-title">Events <span>(Past and Upcoming)</span></h2>
+                <h2 className="events-carousel-title">Current & Upcoming Events</h2>
                 
                 <div className="event-carousel-slide">
                     <div className="event-carousel-image">
                         <img 
-                            src={eventImages[currentEventIndex % eventImages.length]} 
+                            // src={eventImages[currentEventIndex % eventImages.length]} 
+                            src={eventData.events[currentEventIndex].image}
                             alt={eventData.events[currentEventIndex].name} 
                         />
                     </div>
@@ -67,7 +68,7 @@ const Event = () => {
                         </div>
                         <div className="event-carousel-cta">
                             <button className="event-carousel-button">
-                                SEE PICTURES
+                                Read More
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ marginLeft: '8px' }}>
                                     <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="white"/>
                                 </svg>
@@ -120,4 +121,4 @@ const Event = () => {
     );
 };  
 
-export default Event;
+export default EventsHome;

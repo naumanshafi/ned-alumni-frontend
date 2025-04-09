@@ -263,7 +263,7 @@
 /* Events Carousel Section - Enhanced Professional Style */
 .events-carousel-section {
   background-color: #ffffff;
-  padding: 80px 0;
+  padding: 0;
   color: #333333;
   margin: 0 auto;
   margin-bottom: 100px;
@@ -325,8 +325,8 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: 50px;
-  margin-bottom: 40px;
+  gap: 20px;
+  margin-bottom: 20px;
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -335,8 +335,8 @@
 
 .event-carousel-image {
   flex: 1;
-  min-height: 450px;
-  overflow: hidden;
+  /* min-height: 450px; */
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -364,10 +364,10 @@
 
 .event-carousel-content {
   flex: 1;
-  padding: 40px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
 }
 
 .event-carousel-name {
