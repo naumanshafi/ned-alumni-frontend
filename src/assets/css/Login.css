@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 111vh;
-    padding: 20px;
+    padding: 180px 140px 20px 0px;
     margin-left: 150px;
   }
   
@@ -42,7 +42,7 @@
     margin-top: 10px;
     color: #333;
   }
-  
+
   .subtitle {
     margin: 20px 0;
     color: #666;

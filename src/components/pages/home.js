@@ -24,7 +24,7 @@ const Home = () => {
               VIEW LATEST EVENT
             </button>
             <button className="learn-more-btn" onClick={() => navigate('/about-us')}>
-              LEARN MORE
+              Read About Us
             </button>
           </div>
         </div>

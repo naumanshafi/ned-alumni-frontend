@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import '../../assets/css/Login.css';
+import '../../assets/css/myLogin.css';
 import AuthService from './AuthService';
 
 const Login = () => {
@@ -117,6 +118,9 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <div className='section-top-bottom'>
+        Help
+      </div>
       <div className="login-row">
         <div className="login-col">
           <div className="login-left">
@@ -143,7 +147,7 @@ const Login = () => {
                 alt="logo"
                 className="logo"
               />
-              <h4 className="title">NED ALUMNI ASSOCIATE OF TRI STATE</h4>
+              <h4 className="title">NED Alumni Assocation of Tri-State</h4>
             </div>
             <p className="subtitle">Please login to your account</p>
 
@@ -194,13 +198,13 @@ const Login = () => {
         <div className="login-col">
           <div className="login-right">
             <div className="info-section">
-              <h4>We are more than just a company</h4>
-              <p>
+              <h4>NEDATS Alumni Network</h4>
+{              <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
-            </div>
+}            </div>
           </div>
         </div>
       </div>
