@@ -1,0 +1,94 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Nedaasv Eid Gala At Bayland Park",
+      "description": "Family Event with fun filled activities including Food, Live BBQ, Games, Music, Free Parking, and Bounce House",
+      "location": "999 E Caribbean Drive, Sunnyvale, CA",
+      "date": "27/04/2025",
+      "startTime": "11:00 am",
+      "endTime": "1:00 am",
+      "image": "/images/Event_1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Annual NED Alumni Gathering",
+      "description": "Connect with fellow alumni and celebrate our achievements at our annual gathering",
+      "location": "Marriott Hotel, San Jose, CA",
+      "date": "15/11/2025",
+      "startTime": "6:00 pm",
+      "endTime": "11:00 pm",
+      "image": "/images/Event_2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "NED Tech Conference 2025",
+      "description": "A day of technical talks, workshops and networking with industry experts",
+      "location": "Convention Center, Santa Clara, CA",
+      "date": "20/03/2025",
+      "startTime": "9:00 am",
+      "endTime": "5:00 pm",
+      "image": "/images/Event_3.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "NED Career Fair 2025",
+      "description": "Connect with potential employers and explore career opportunities in various industries",
+      "location": "Hyatt Regency, San Francisco, CA",
+      "date": "12/06/2025",
+      "startTime": "10:00 am",
+      "endTime": "4:00 pm",
+      "image": "/images/Event_4.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "NED Sports Tournament",
+      "description": "Annual sports competition featuring cricket, volleyball, and other games for NED alumni and families",
+      "location": "Central Park, Santa Clara, CA",
+      "date": "08/07/2025",
+      "startTime": "8:00 am",
+      "endTime": "6:00 pm",
+      "image": "/images/Event_1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Silicon Valley Tech Tour",
+      "description": "Exclusive tour of leading tech companies in Silicon Valley for NED alumni",
+      "location": "Mountain View, CA",
+      "date": "23/09/2025",
+      "startTime": "9:30 am",
+      "endTime": "5:30 pm",
+      "image": "/images/Event_2.jpg"
+    },
+    {
+      "id": 7,
+      "name": "NED Alumni Scholarship Fundraiser",
+      "description": "Fundraising event to support scholarships for promising NED University students",
+      "location": "Four Seasons Hotel, Palo Alto, CA",
+      "date": "05/12/2025",
+      "startTime": "7:00 pm",
+      "endTime": "10:00 pm",
+      "image": "/images/Event_3.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Winter Gala 2025",
+      "description": "Annual winter celebration featuring dinner, music, and networking for NED alumni",
+      "location": "Ritz-Carlton, Half Moon Bay, CA",
+      "date": "18/12/2025",
+      "startTime": "6:30 pm",
+      "endTime": "11:30 pm",
+      "image": "/images/Event_4.jpeg"
+    },
+    {
+      "id": 9,
+      "name": "NED Leadership Summit",
+      "description": "Leadership conference featuring prominent NED alumni speakers and networking opportunities",
+      "location": "Sheraton Hotel, Fremont, CA",
+      "date": "22/02/2025",
+      "startTime": "10:00 am",
+      "endTime": "4:00 pm",
+      "image": "/images/Event_1.jpg"
+    }
+  ]
+} 

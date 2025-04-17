@@ -1,0 +1,94 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "NEDians Family and Friends Picnic",
+      "description": "Join us for a day of fun and relaxation with family and friends",
+      "location": "Lake Chabot Regional Park, Castro Valley",
+      "date": "26/10/2024",
+      "startTime": "12:00 pm",
+      "endTime": "11:59 am",
+      "image": "/images/Event_2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Eid Dinner & Musical Evening with Alamgir",
+      "description": "Join us for a musical evening with the legendary Alamgir",
+      "location": "5748 Monwry School Road, Newark, CA",
+      "date": "06/05/2024",
+      "startTime": "6:00 pm",
+      "endTime": "10:30 pm",
+      "image": "/images/Event_3.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "1000 Great Highway at Ocean Beach",
+      "description": "Don't forget your beach chairs, warm clothes, and prayer mats",
+      "location": "San Francisco, CA",
+      "date": "03/08/2024",
+      "startTime": "5:00 pm",
+      "endTime": "10:00 pm",
+      "image": "/images/Event_4.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "NED Alumni Summer Mixer",
+      "description": "Summer networking event for NED alumni with drinks and appetizers",
+      "location": "Rooftop Bar, San Jose, CA",
+      "date": "15/07/2024",
+      "startTime": "6:30 pm",
+      "endTime": "9:30 pm",
+      "image": "/images/Event_1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Professional Development Workshop",
+      "description": "Career advancement workshop featuring speakers from tech and engineering industries",
+      "location": "NED Alumni Center, Santa Clara, CA",
+      "date": "22/06/2024",
+      "startTime": "10:00 am",
+      "endTime": "3:00 pm",
+      "image": "/images/Event_2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "NED Spring Festival",
+      "description": "Annual spring celebration with cultural performances, food, and activities for families",
+      "location": "Memorial Park, Cupertino, CA",
+      "date": "18/04/2024",
+      "startTime": "11:00 am",
+      "endTime": "5:00 pm",
+      "image": "/images/Event_3.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Tech Talk: AI and the Future",
+      "description": "Panel discussion on artificial intelligence and its impact on engineering",
+      "location": "Google Campus, Mountain View, CA",
+      "date": "12/03/2024",
+      "startTime": "7:00 pm",
+      "endTime": "9:00 pm",
+      "image": "/images/Event_4.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "NED Alumni Bowling Night",
+      "description": "Casual bowling night for NED alumni and friends",
+      "location": "Bowlero Lanes, Fremont, CA",
+      "date": "08/02/2024",
+      "startTime": "7:30 pm",
+      "endTime": "10:30 pm",
+      "image": "/images/Event_1.jpg"
+    },
+    {
+      "id": 9,
+      "name": "New Year Gala 2024",
+      "description": "Elegant celebration to welcome the new year with dinner and dancing",
+      "location": "Fairmont Hotel, San Jose, CA",
+      "date": "12/01/2024",
+      "startTime": "8:00 pm",
+      "endTime": "1:00 am",
+      "image": "/images/Event_2.jpg"
+    }
+  ]
+} 

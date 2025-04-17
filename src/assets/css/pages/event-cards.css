@@ -1,0 +1,392 @@
+/* Common Event Card Styles for NED Alumni Events */
+
+.ned-events-container {
+  padding-top: 120px;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  position: relative;
+  width: 100%;
+}
+
+.event-banner {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.event-banner:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #890c25 0%, #c13b54 100%);
+}
+
+.event-heading {
+  color: #890c25;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-family: 'PayPal Sans Big', 'Helvetica Neue', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-heading:after {
+  content: '';
+  width: 120px;
+  height: 4px;
+  background-color: #890c25;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.events-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Event Cards Grid Layout */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+/* Event Card Styling */
+.event-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eaeaea;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+  position: relative;
+  height: 570px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Event Date Badge */
+.event-date {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  border: 1px solid #f1f1f1;
+}
+
+.date-day {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 16px;
+  font-weight: 600;
+  color: #890c25;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* Event Card Body */
+.card-body {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #890c25;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 67px;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.event-details {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  min-height: 24px;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.detail-icon {
+  color: #890c25;
+  margin-right: 15px;
+  min-width: 24px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-text {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Event Action Button */
+.event-action {
+  margin-top: 8px;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #890c25;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-btn:hover {
+  background-color: #6b091d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(137, 12, 37, 0.25);
+}
+
+/* Navigation Link */
+.view-link-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 60px;
+}
+
+.view-more-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.view-more-link:hover {
+  background-color: #222;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .card-image-container {
+    height: 400px;
+  }
+  
+  .event-heading {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .event-heading {
+    font-size: 2.5rem;
+  }
+  
+  .card-image-container {
+    height: 350px;
+  }
+  
+  .event-date {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .date-day {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ned-events-container {
+    padding-top: 100px;
+  }
+  
+  .event-banner {
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+  
+  .event-heading {
+    font-size: 2.2rem;
+  }
+  
+  .event-heading:after {
+    width: 100px;
+    bottom: -15px;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .card-image-container {
+    height: 300px;
+  }
+  
+  .card-body {
+    padding: 25px;
+  }
+  
+  .event-title {
+    font-size: 20px;
+    height: 56px;
+  }
+  
+  .detail-item {
+    margin-bottom: 12px;
+  }
+  
+  .contact-btn {
+    padding: 14px 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ned-events-container {
+    padding-top: 80px;
+  }
+  
+  .event-banner {
+    padding: 30px 0;
+  }
+  
+  .event-heading {
+    font-size: 1.8rem;
+  }
+  
+  .card-image-container {
+    height: 250px;
+  }
+  
+  .event-date {
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .date-day {
+    font-size: 24px;
+  }
+  
+  .date-month {
+    font-size: 14px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .event-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    height: 50px;
+  }
+  
+  .detail-text {
+    font-size: 14px;
+  }
+}
+
+.event-nav-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+} 

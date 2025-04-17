@@ -1,6 +1,5 @@
 .main {
   overflow: hidden;
-  gap: 60px;
   width: 100%;
   display: flex;
   min-height: 100vh;

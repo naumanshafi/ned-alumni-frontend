@@ -1,0 +1,71 @@
+import React, { useState, useEffect } from 'react';
+import upcomingEventsData from '../../data/upcoming_events.json';
+import '../../assets/css/pages/event-cards.css';
+
+const UpcomingEvents = () => {
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+
+  useEffect(() => {
+    setUpcomingEvents(upcomingEventsData.events);
+  }, []);
+
+  const formatDate = (dateString) => {
+    const parts = dateString.split('/');
+    return parts;
+  };
+
+  return (
+    <div className="ned-events-container">
+      <div className="event-banner">
+        <h1 className="event-heading">NED Alumni Upcoming Events</h1>
+      </div>
+      <div className="events-content">
+        <div className="events-grid">
+          {upcomingEvents.map(event => {
+            const [day, month, year] = formatDate(event.date);
+            const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+            const monthName = months[parseInt(month) - 1];
+            
+            return (
+              <div key={event.id} className="event-card">
+                <div className="card-image-container">
+                  <img src={event.image} alt={event.name} className="card-image" />
+                  <div className="event-date">
+                    <div className="date-day">{day}</div>
+                    <div className="date-month">{monthName}</div>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <h2 className="event-title">{event.name}</h2>
+                  
+                  <div className="event-details">
+                    <div className="detail-item">
+                      <span className="detail-icon">📍</span>
+                      <span className="detail-text">{event.location}</span>
+                    </div>
+                    
+                    <div className="detail-item">
+                      <span className="detail-icon">📅</span>
+                      <span className="detail-text">{event.date}</span>
+                    </div>
+                    
+                    <div className="detail-item">
+                      <span className="detail-icon">⏰</span>
+                      <span className="detail-text">{event.startTime} - {event.endTime}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="event-action">
+                    <button className="contact-btn">CONTACT US</button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UpcomingEvents; 
