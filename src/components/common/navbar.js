@@ -137,8 +137,8 @@ const Navbar = () => {
     }
     return (
       <div className="navbar-auth">
-        <button className="auth-button sign-in" onClick={() => navigate('/login')}>Login</button>
-        <button className="auth-button sign-up" onClick={() => navigate('/register')}>Sign Up</button>
+        <button className="auth-button sign-in login-btn" onClick={() => navigate('/login')}>Login</button>
+        <button className="auth-button sign-up signup-btn" onClick={() => navigate('/register')}>Sign Up</button>
       </div>
     );
   };

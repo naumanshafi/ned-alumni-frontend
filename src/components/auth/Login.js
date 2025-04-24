@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import '../../assets/css/Login.css';
-import '../../assets/css/myLogin.css';
 import AuthService from './AuthService';
 
 const Login = () => {
@@ -19,6 +18,32 @@ const Login = () => {
     username: '',
     password: '',
   });
+  const [showPassword, setShowPassword] = useState(false);
+
+  // Hide login/signup buttons in nav when on login page
+  useEffect(() => {
+    // Get the login and signup buttons from navbar
+    const loginBtn = document.querySelector('.login-btn');
+    const signUpBtn = document.querySelector('.signup-btn');
+    
+    // Add class to hide them
+    if (loginBtn) loginBtn.classList.add('nav-hide-on-login');
+    if (signUpBtn) signUpBtn.classList.add('nav-hide-on-login');
+    
+    // Add class to body to prevent scrolling
+    document.body.classList.add('login-page');
+    
+    // Cleanup when component unmounts
+    return () => {
+      if (loginBtn) loginBtn.classList.remove('nav-hide-on-login');
+      if (signUpBtn) signUpBtn.classList.remove('nav-hide-on-login');
+      document.body.classList.remove('login-page');
+    };
+  }, []);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,8 +85,6 @@ const Login = () => {
   };
 
   const showMessage = (message, type = 'error') => {
-    console.log('Showing message:', message, 'with type:', type);
-    console.log('Showing ShowPopup:', showPopup);
     setPopupMessage(message);
     setPopupType(type);
     setShowPopup(true);
@@ -116,96 +139,103 @@ const Login = () => {
     navigate('/register');
   };
 
+  const handleForgotPassword = () => {
+    navigate('/forgot-password');
+  };
+
   return (
     <div className="login-container">
-      <div className='section-top-bottom'>
-        Help
-      </div>
       <div className="login-row">
-        <div className="login-col">
-          <div className="login-left">
-            {showPopup && (
-              <div className={`inline-popup-message ${popupType}`}>
-                <div className="popup-content">
-                  {popupType === 'error' && (
-                    <i className="fas fa-exclamation-circle" style={{ marginRight: '10px', color: '#dc3545' }}></i>
-                  )}
-                  {popupType === 'success' && (
-                    <i className="fas fa-check-circle" style={{ marginRight: '10px', color: '#28a745' }}></i>
-                  )}
-                  {popupType === 'warning' && (
-                    <i className="fas fa-exclamation-triangle" style={{ marginRight: '10px', color: '#ffc107' }}></i>
-                  )}
-                  <span>{popupMessage}</span>
-                </div>
-              </div>
-            )}
-            
-            <div className="text-center">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                alt="logo"
-                className="logo"
-              />
-              <h4 className="title">NED Alumni Assocation of Tri-State</h4>
-            </div>
-            <p className="subtitle">Please login to your account</p>
-
-            <form onSubmit={handleSubmit} className="login-form">
-              <div className="form-group">
-                <label htmlFor="username" className="form-label">Username</label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleChange}
-                  className={`form-control ${errors.username ? 'is-invalid' : ''}`}
-                  placeholder="Enter your username"
-                />
-                {errors.username && <div className="error-text">{errors.username}</div>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="password" className="form-label">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                  placeholder="Enter your password"
-                />
-                {errors.password && <div className="error-text">{errors.password}</div>}
-              </div>
-
-              <div className="form-actions">
-                <button type="submit" className="btn btn-primary">Sign In</button>
-                <a href="#" className="forgot-password">Forgot password?</a>
-              </div>
-            </form>
-
-            <div className="signup-section">
-              <p className="signup-text">
-                Don't have an account?{' '}
-                <button className="signup-link" onClick={goToRegister}>Signup</button>
-              </p>
-            </div>
-          </div>
+        <div className="text-center">
+          <img
+            src="/images/ned_logo.png"
+            alt="NED Alumni Logo"
+            className="logo"
+          />
+          <h4 className="title">NED Alumni Association of Tri-State</h4>
         </div>
+        
+        <p className="subtitle">LOG IN TO ACCESS YOUR ALUMNI ACCOUNT</p>
 
-        <div className="login-col">
-          <div className="login-right">
-            <div className="info-section">
-              <h4>NEDATS Alumni Network</h4>
-{              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-}            </div>
+        {showPopup && (
+          <div className={`inline-popup-message ${popupType}`}>
+            <div className="popup-content">
+              {popupType === 'error' && (
+                <i className="fas fa-exclamation-circle" style={{ marginRight: '10px', color: '#890c25' }}></i>
+              )}
+              {popupType === 'success' && (
+                <i className="fas fa-check-circle" style={{ marginRight: '10px', color: '#28a745' }}></i>
+              )}
+              {popupType === 'warning' && (
+                <i className="fas fa-exclamation-triangle" style={{ marginRight: '10px', color: '#ffc107' }}></i>
+              )}
+              <span>{popupMessage}</span>
+            </div>
           </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-group">
+            <label htmlFor="username" className="form-label"> Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              className={`form-control ${errors.username ? 'is-invalid' : ''}`}
+              placeholder="Enter your username"
+              autoComplete="username"
+            />
+            {errors.username && <div className="error-text">{errors.username}</div>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">Password</label>
+            <div className="password-input-wrapper">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                placeholder="Enter your password"
+                autoComplete="current-password"
+              />
+              <button 
+                type="button" 
+                className="password-toggle-btn" 
+                onClick={togglePasswordVisibility}
+                tabIndex="-1"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? (
+                  <i className="fas fa-eye-slash"></i>
+                ) : (
+                  <i className="fas fa-eye"></i>
+                )}
+              </button>
+            </div>
+            {errors.password && <div className="error-text">{errors.password}</div>}
+          </div>
+
+          <div className="form-actions">
+            <button type="submit" className="btn btn-primary">Sign In</button>
+            <button 
+              type="button" 
+              className="forgot-password" 
+              onClick={handleForgotPassword}
+            >
+              Forgot password?
+            </button>
+          </div>
+        </form>
+
+        <div className="signup-section">
+          <p className="signup-text">
+            Don't have an account? <button className="signup-link" onClick={goToRegister}>Sign Up</button>
+          </p>
         </div>
       </div>
     </div>
