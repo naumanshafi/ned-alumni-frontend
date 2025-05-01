@@ -2,93 +2,261 @@
   "events": [
     {
       "id": 1,
+      "name": "Eid Gala and Scholarship Awards 2025",
+      "description": "Join us for an elegant evening celebrating Eid and recognizing outstanding academic achievements within our community. The annual NED Alumni Eid Gala and Scholarship Awards is our premier social event of the year, bringing together alumni, family, and friends for networking, entertainment, and the presentation of scholarships to deserving students.",
+      "location": "Grand Ballroom, Hilton Hotel, San Francisco",
+      "date": "15/05/2025",
+      "startTime": "6:30 pm",
+      "endTime": "11:00 pm",
+      "image": "/images/Event_2.jpg",
+      "photos": [
+        "/images/Event_1.jpg",
+        "/images/Event_3.jpeg",
+        "/images/Event_4.jpeg",
+        "/images/Event_2.jpg",
+        "/images/Event_1.jpg",
+        "/images/Event_3.jpeg",
+        "/images/Event_4.jpeg",
+        "/images/Event_2.jpg"
+      ],
+      "highlights": [
+        "Elegant dinner celebrating Eid and academic achievement",
+        "Scholarship awards presentation to outstanding students",
+        "Special guest speakers from the community",
+        "Entertainment and networking opportunities"
+      ],
+      "dressCode": "Formal",
+      "tickets": [
+        "Early Bird: $75 per person (until March 1, 2025)",
+        "Regular: $90 per person",
+        "Table of 8: $650"
+      ]
+    },
+    {
+      "id": 2,
       "name": "NEDians Family and Friends Picnic",
-      "description": "Join us for a day of fun and relaxation with family and friends",
+      "description": "Join us for a day of fun and relaxation with family and friends. We had a wonderful time with outdoor games, delicious food, and great company. This annual event brings together our community for a day of connection and enjoyment in the beautiful outdoors.",
       "location": "Lake Chabot Regional Park, Castro Valley",
       "date": "26/10/2024",
       "startTime": "12:00 pm",
       "endTime": "11:59 am",
-      "image": "/images/Event_2.jpg"
+      "image": "/images/Event_2.jpg",
+      "photos": [
+        "/images/Event_3.jpeg",
+        "/images/Event_4.jpeg"
+      ],
+      "highlights": [
+        "Family games and activities",
+        "Community potluck with delicious food",
+        "Sports competitions",
+        "Kids play area with supervision"
+      ],
+      "dressCode": "Casual",
+      "tickets": [
+        "Members: Free",
+        "Non-members: $15 per adult",
+        "Children under 12: Free"
+      ]
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Eid Dinner & Musical Evening with Alamgir",
-      "description": "Join us for a musical evening with the legendary Alamgir",
+      "description": "Join us for a musical evening with the legendary Alamgir. The event was a huge success, featuring beautiful performances, delicious traditional food, and a warm celebration of community and culture.",
       "location": "5748 Monwry School Road, Newark, CA",
       "date": "06/05/2024",
       "startTime": "6:00 pm",
       "endTime": "10:30 pm",
-      "image": "/images/Event_3.jpeg"
+      "image": "/images/Event_3.jpeg",
+      "photos": [
+        "/images/Event_1.jpg",
+        "/images/Event_4.jpeg"
+      ],
+      "highlights": [
+        "Live performance by legendary singer Alamgir",
+        "Traditional Eid dinner with multiple courses",
+        "Community recognition awards",
+        "Networking with alumni and friends"
+      ],
+      "dressCode": "Semi-formal",
+      "tickets": [
+        "General Admission: $50",
+        "VIP (includes meet & greet): $100",
+        "Students: $35"
+      ]
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "1000 Great Highway at Ocean Beach",
-      "description": "Don't forget your beach chairs, warm clothes, and prayer mats",
+      "description": "Don't forget your beach chairs, warm clothes, and prayer mats. We had a memorable sunset gathering at Ocean Beach, with community prayers, conversations, and beautiful views of the Pacific Ocean.",
       "location": "San Francisco, CA",
       "date": "03/08/2024",
       "startTime": "5:00 pm",
       "endTime": "10:00 pm",
-      "image": "/images/Event_4.jpeg"
+      "image": "/images/Event_4.jpeg",
+      "photos": [
+        "/images/Event_2.jpg",
+        "/images/Event_3.jpeg"
+      ],
+      "highlights": [
+        "Sunset prayers by the ocean",
+        "Beach bonfire (permits secured)",
+        "Community discussions",
+        "Light refreshments provided"
+      ]
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "NED Alumni Summer Mixer",
-      "description": "Summer networking event for NED alumni with drinks and appetizers",
+      "description": "Summer networking event for NED alumni with drinks and appetizers. Our annual mixer provided the perfect opportunity to connect with fellow alumni, share experiences, and build professional relationships in a relaxed setting.",
       "location": "Rooftop Bar, San Jose, CA",
       "date": "15/07/2024",
       "startTime": "6:30 pm",
       "endTime": "9:30 pm",
-      "image": "/images/Event_1.jpg"
+      "image": "/images/Event_1.jpg",
+      "photos": [
+        "/images/Event_3.jpeg",
+        "/images/Event_2.jpg"
+      ],
+      "highlights": [
+        "Networking opportunities with professionals from various industries",
+        "Complimentary appetizers and welcome drink",
+        "Speed networking session",
+        "Industry insights from senior alumni"
+      ],
+      "dressCode": "Business Casual",
+      "tickets": [
+        "Members: $25",
+        "Non-members: $40",
+        "Recent Graduates (1-2 years): $15"
+      ]
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Professional Development Workshop",
-      "description": "Career advancement workshop featuring speakers from tech and engineering industries",
+      "description": "Career advancement workshop featuring speakers from tech and engineering industries. This workshop provided valuable insights into career growth, technical skill development, and navigating the job market in Silicon Valley.",
       "location": "NED Alumni Center, Santa Clara, CA",
       "date": "22/06/2024",
       "startTime": "10:00 am",
       "endTime": "3:00 pm",
-      "image": "/images/Event_2.jpg"
+      "image": "/images/Event_2.jpg",
+      "photos": [
+        "/images/Event_4.jpeg",
+        "/images/Event_1.jpg"
+      ],
+      "highlights": [
+        "Industry expert speakers from Google, Apple and Meta",
+        "Resume review sessions",
+        "Mock interviews with feedback",
+        "Networking lunch included"
+      ],
+      "tickets": [
+        "Early Registration: $45",
+        "Regular: $60",
+        "Students: $30"
+      ]
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "NED Spring Festival",
-      "description": "Annual spring celebration with cultural performances, food, and activities for families",
+      "description": "Annual spring celebration with cultural performances, food, and activities for families. The festival showcased our rich cultural heritage through music, dance, art, and cuisine, bringing together community members of all ages.",
       "location": "Memorial Park, Cupertino, CA",
       "date": "18/04/2024",
       "startTime": "11:00 am",
       "endTime": "5:00 pm",
-      "image": "/images/Event_3.jpeg"
+      "image": "/images/Event_3.jpeg",
+      "photos": [
+        "/images/Event_1.jpg",
+        "/images/Event_4.jpeg"
+      ],
+      "highlights": [
+        "Cultural performances showcasing traditional music and dance",
+        "Food stalls featuring regional cuisines",
+        "Art and craft exhibition by community members",
+        "Children's activities including face painting and games"
+      ],
+      "tickets": [
+        "Adults: $10",
+        "Children (5-12): $5",
+        "Family Pass (2 adults + 3 children): $25"
+      ]
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Tech Talk: AI and the Future",
-      "description": "Panel discussion on artificial intelligence and its impact on engineering",
+      "description": "Panel discussion on artificial intelligence and its impact on engineering. Leading experts from academia and industry shared insights on how AI is transforming traditional engineering disciplines and what skills will be valuable in the future job market.",
       "location": "Google Campus, Mountain View, CA",
       "date": "12/03/2024",
       "startTime": "7:00 pm",
       "endTime": "9:00 pm",
-      "image": "/images/Event_4.jpeg"
+      "image": "/images/Event_4.jpeg",
+      "photos": [
+        "/images/Event_2.jpg",
+        "/images/Event_1.jpg"
+      ],
+      "highlights": [
+        "Panel of AI experts from leading tech companies",
+        "Discussion on AI applications in engineering fields",
+        "Q&A session with audience participation",
+        "Networking reception following the talk"
+      ],
+      "dressCode": "Business Casual",
+      "tickets": [
+        "General Admission: Free (registration required)",
+        "Virtual Attendance: Free"
+      ]
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "NED Alumni Bowling Night",
-      "description": "Casual bowling night for NED alumni and friends",
+      "description": "Casual bowling night for NED alumni and friends. This fun-filled evening provided a relaxed atmosphere for socializing, friendly competition, and building camaraderie among our alumni community.",
       "location": "Bowlero Lanes, Fremont, CA",
       "date": "08/02/2024",
       "startTime": "7:30 pm",
       "endTime": "10:30 pm",
-      "image": "/images/Event_1.jpg"
+      "image": "/images/Event_1.jpg",
+      "photos": [
+        "/images/Event_3.jpeg",
+        "/images/Event_4.jpeg"
+      ],
+      "highlights": [
+        "Friendly bowling competition with prizes",
+        "Appetizers and soft drinks included",
+        "Team building activities",
+        "Casual networking opportunities"
+      ],
+      "dressCode": "Casual",
+      "tickets": [
+        "Members: $25 (includes bowling, shoes, and food)",
+        "Non-members: $35",
+        "Students: $20"
+      ]
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "New Year Gala 2024",
-      "description": "Elegant celebration to welcome the new year with dinner and dancing",
+      "description": "Elegant celebration to welcome the new year with dinner and dancing. Our annual gala featured live music, gourmet dining, and a countdown celebration in a beautifully decorated venue, creating memorable moments for all attendees.",
       "location": "Fairmont Hotel, San Jose, CA",
       "date": "12/01/2024",
       "startTime": "8:00 pm",
       "endTime": "1:00 am",
-      "image": "/images/Event_2.jpg"
+      "image": "/images/Event_2.jpg",
+      "photos": [
+        "/images/Event_4.jpeg",
+        "/images/Event_1.jpg",
+        "/images/Event_3.jpeg"
+      ],
+      "highlights": [
+        "Gourmet dinner with multiple courses",
+        "Live band and DJ for dancing",
+        "Silent auction supporting scholarship fund",
+        "Midnight champagne toast and celebration"
+      ],
+      "dressCode": "Black Tie Optional",
+      "tickets": [
+        "Early Bird: $120 per person",
+        "Regular: $150 per person",
+        "VIP Table (10 guests): $1,400"
+      ]
     }
   ]
 } 

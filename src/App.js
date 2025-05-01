@@ -9,6 +9,7 @@ import Nedats from './components/pages/Nedats';
 import Events from './components/pages/Events';
 import UpcomingEvents from './components/pages/UpcomingEvents';
 import PastEvents from './components/pages/PastEvents';
+import EventDetails from './components/pages/EventDetails';
 import Member from './components/pages/Member';
 import Programs from './components/pages/Events';
 import Media from './components/pages/Media';
@@ -38,6 +39,7 @@ const AppContent = () => {
                 <Route path="/Events" element={<Events />} />
                 <Route path="/events/upcoming" element={<UpcomingEvents />} />
                 <Route path="/events/past" element={<PastEvents />} />
+                <Route path="/event-details/:id" element={<EventDetails />} />
                 <Route path="/member" element={<Member />} />
                 <Route path="/programs" element={<Programs />} />
                 <Route path="/media" element={<Media />} />

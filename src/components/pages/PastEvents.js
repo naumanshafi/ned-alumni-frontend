@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import pastEventsData from '../../data/past_events.json';
 import '../../assets/css/pages/event-cards.css';
 
@@ -56,7 +57,7 @@ const PastEvents = () => {
                   </div>
                   
                   <div className="event-action">
-                    <button className="contact-btn">CONTACT US</button>
+                    <Link to={`/event-details/${event.id}`} className="contact-btn">MORE DETAILS</Link>
                   </div>
                 </div>
               </div>

@@ -155,7 +155,7 @@ const Login = () => {
           <h4 className="title">NED Alumni Association of Tri-State</h4>
         </div>
         
-        <p className="subtitle">LOG IN TO ACCESS YOUR ALUMNI ACCOUNT</p>
+        <p className="login-subtitle">LOG IN TO ACCESS YOUR ALUMNI ACCOUNT</p>
 
         {showPopup && (
           <div className={`inline-popup-message ${popupType}`}>
